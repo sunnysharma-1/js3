@@ -37,21 +37,19 @@ export default function VideoIntroductionSection() {
             <div className="inline-flex items-center gap-2 rounded-full bg-[#0066CC]/10 px-4 py-1.5">
               <span className="h-2 w-2 rounded-full bg-[#00A896]" />
               <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#0066CC]">
-                Welcome to Jayshree Instruments
+                Jayshree Instruments Excellence
               </span>
             </div>
 
             <div className="space-y-3">
               <h2 className="text-balance text-3xl font-bold leading-tight text-gray-900 md:text-4xl lg:text-5xl">
-                Building{" "}
+                State-of-the-Art <br />
                 <span className="bg-gradient-to-r from-[#0066CC] to-[#00A896] bg-clip-text text-transparent">
-                  production-ready electronics
-                </span>{" "}
-                scaled for your market.
+                  Manufacturing Facility
+                </span>
               </h2>
               <p className="text-base sm:text-lg leading-relaxed text-gray-600 text-pretty">
-                Take a look inside our facility. From high-speed SMT lines to dedicated wire harnessing stations,
-                we have the infrastructure to handle low-volume prototypes and high-volume mass production under one roof.
+                Experience our 50,000 sq. ft. facility where advanced automation meets expert craftsmanship. From rapid prototyping to high-volume assembly, we deliver excellence at every scale.
               </p>
             </div>
 
@@ -79,7 +77,7 @@ export default function VideoIntroductionSection() {
                 </DialogContent>
               </Dialog>
               <span className="text-sm text-gray-500">
-                ~2 minute tour of our factory floor
+                See our SMT lines in action
               </span>
             </div>
 
@@ -90,9 +88,9 @@ export default function VideoIntroductionSection() {
                   <Award className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">Process Control</div>
+                  <div className="font-semibold text-gray-900">Rigorous Quality Assurance</div>
                   <div className="text-sm text-gray-600">
-                    Strict adherence to SOPs and ESD safety.
+                    IPC-A-610 Class 2 & 3 Compliance.
                   </div>
                 </div>
               </div>
@@ -102,8 +100,8 @@ export default function VideoIntroductionSection() {
                   <Users className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">Skilled Workforce</div>
-                  <div className="text-sm text-gray-600"> IPC-certified technicians.</div>
+                  <div className="font-semibold text-gray-900">Expert Engineering Team</div>
+                  <div className="text-sm text-gray-600"> IPC-Certified Technicians & Engineers.</div>
                 </div>
               </div>
 
@@ -112,9 +110,9 @@ export default function VideoIntroductionSection() {
                   <CheckCircle2 className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">End-to-End Support</div>
+                  <div className="font-semibold text-gray-900">Turnkey Solutions</div>
                   <div className="text-sm text-gray-600">
-                    Sourcing, Assembly, Testing & Packaging.
+                    Procurement, PCBA, Box Build, & Logistics.
                   </div>
                 </div>
               </div>
@@ -124,9 +122,9 @@ export default function VideoIntroductionSection() {
                   <Zap className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">Rapid NPI</div>
+                  <div className="font-semibold text-gray-900">Agile NPI Services</div>
                   <div className="text-sm text-gray-600">
-                    Quick-turn prototyping service.
+                    Accelerated timeline from prototype to production.
                   </div>
                 </div>
               </div>
@@ -199,7 +197,7 @@ export default function VideoIntroductionSection() {
             <div className="pointer-events-none absolute -bottom-10 left-1/2 h-32 w-72 -translate-x-1/2 rounded-full bg-[#0066CC]/15 blur-3xl" />
           </motion.div>
         </div>
-      </div>
-    </section>
+      </div >
+    </section >
   )
 }

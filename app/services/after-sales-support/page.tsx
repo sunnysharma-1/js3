@@ -48,45 +48,45 @@ export default function AfterSalesSupportPage() {
     {
       key: "warranty",
       icon: Shield,
-      title: "Warranty Management",
-      short: "Fast, transparent claims and lifecycle protection.",
+      title: "RMA & Warranty Logistics",
+      short: "Streamlined return handling.",
       description:
-        "Full warranty management — from registration to claims and reporting. We streamline the process so customers get repairs or replacements with minimal friction.",
+        "Portal-based RMA tracking with 24-hour initial triage. We manage the reverse logistics, warranty validation, and routing for repair or replacement.",
       bullets: [
-        "Extended and configurable plans",
-        "One-click claim initiation",
-        "Clear SLA dashboard",
+        "Digital RMA Portal",
+        "24h Triage Turnaround",
+        "Warranty Validation",
       ],
       color: "bg-gradient-to-br from-cyan-600 to-blue-600",
     },
     {
       key: "diagnostics",
       icon: Settings,
-      title: "Diagnostics & Troubleshooting",
-      short: "Fast root-cause analysis by certified engineers.",
+      title: "Root Cause Diagnostics",
+      short: "Component-level failure analysis.",
       description:
-        "Remote and on-site diagnostics with actionable reports so your teams can reduce downtime and address recurring issues effectively.",
-      bullets: ["Remote session support", "Root-cause reports", "Performance tuning"],
+        "We go beyond board swapping. Using thermal imaging, logic analysis, and X-ray, we identify specific silicon or solder failures to prevent recurrence.",
+      bullets: ["Thermal Profiling", "Signal Integrity Checks", "Failure Analysis Report"],
       color: "bg-gradient-to-br from-teal-500 to-cyan-600",
     },
     {
       key: "repair",
       icon: Wrench,
-      title: "Repair & Rework",
-      short: "Board-level repairs and certified quality checks.",
+      title: "Level 4 Repair (BGA)",
+      short: "High-complexity rework.",
       description:
-        "Component-level repair, conformal coating, and test validation to ensure repaired units meet original specifications.",
-      bullets: ["Component replacement", "IPC-level rework", "Functional verification"],
+        "Precision removal and replacement of BGAs, QFNs, and fine-pitch connectors using split-vision rework stations and X-ray verification.",
+      bullets: ["BGA Re-balling/Replacement", "Trace & Pad Repair", "X-Ray Validation"],
       color: "bg-gradient-to-br from-purple-600 to-violet-500",
     },
     {
       key: "parts",
       icon: Package,
-      title: "Spare Parts & Upgrades",
-      short: "Keep stock moving and avoid obsolescence.",
+      title: "Legacy Sustainment",
+      short: "Extending product lifecycles.",
       description:
-        "Parts sourcing, retrofit programs and obsolescence planning to extend product life and reduce total cost of ownership.",
-      bullets: ["Kitted spares", "Retrofit engineering", "Obsolescence tracking"],
+        "Support for products 10+ years in the field. We manage Last Time Buys (LTB) and engineer form-fit-function alternatives for obsolete components.",
+      bullets: ["Obsolete Part Sourcing", "Alternative Engineering", "Long-term Storage"],
       color: "bg-gradient-to-br from-orange-400 to-amber-500",
     },
   ]
@@ -101,7 +101,7 @@ export default function AfterSalesSupportPage() {
       {/* HERO */
         <header
           ref={heroRef}
-          className="relative overflow-hidden bg-linear-to-b from-white to-slate-50 py-12 md:py-16"
+          className="relative overflow-hidden bg-linear-to-b from-white to-slate-50 py-20 md:py-28"
           aria-labelledby="hero-heading"
         >
           {/* PCB patterned background (SVG) */}
@@ -143,7 +143,7 @@ export default function AfterSalesSupportPage() {
           }
         `}</style>
 
-          <div className="w-full max-w-none px-6 md:px-12 mx-auto relative z-10">
+          <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8">
               <div className="lg:col-span-7">
                 <div className="inline-flex items-center gap-3 rounded-full bg-white/90 backdrop-blur px-4 py-2 border border-slate-200 shadow-sm mb-6">
@@ -152,14 +152,13 @@ export default function AfterSalesSupportPage() {
                 </div>
 
                 <h1 id="hero-heading" className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
-                  Support that keeps your products
+                  After-sales support that
                   <br />
-                  <span className="bg-linear-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">working reliably</span>
+                  <span className="bg-linear-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">extends product life</span>
                 </h1>
 
                 <p className="text-lg text-slate-600 max-w-2xl mb-6">
-                  Comprehensive, measurable after-sales services — warranty, diagnostics, repairs and parts — backed by
-                  certified engineers and clear SLAs. We specialise in PCB assembly, rework and field reliability.
+                  We don't just fix boards; we manage the entire post-manufacturing lifecycle. From RMA logistics to chip-level repairs, we ensure your field units stay operational.
                 </p>
 
                 <div className="flex flex-wrap gap-3 items-center">
@@ -222,8 +221,8 @@ export default function AfterSalesSupportPage() {
         </header>
       }
       {/* SERVICES (tabbed + cards) */}
-      <section id="services" className="py-12 md:py-16 bg-gray-50">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section id="services" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
               <h2 className="text-2xl md:text-3xl font-bold">Comprehensive Support Services</h2>
@@ -362,8 +361,8 @@ export default function AfterSalesSupportPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-16 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section className="py-12 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
+        <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
               <h3 className="text-xl font-bold">Need help right now?</h3>
@@ -380,7 +379,7 @@ export default function AfterSalesSupportPage() {
       </section>
 
       <footer className="py-8 bg-slate-50">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto text-sm text-slate-600">© {new Date().getFullYear()} JayShree Instruments — All rights reserved.</div>
+        <div className="container mx-auto px-4 lg:px-8 text-sm text-slate-600">© {new Date().getFullYear()} JayShree Instruments — All rights reserved.</div>
       </footer>
     </main>
   )

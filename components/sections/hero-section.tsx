@@ -68,15 +68,18 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
           <div className="relative z-10 text-white space-y-6">
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-balance">
-              Precision Electronics Manufacturing Services
+              Precision Electronics <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 to-white">
+                Manufacturing.
+              </span>
             </h1>
 
             <p className="text-xl lg:text-2xl font-semibold">
-              25+ Years of Engineering Excellence & Production Scalability
+              Scaling your innovations with 25+ years of engineering excellence.
             </p>
 
             <p className="text-base lg:text-lg text-white/90 max-w-xl">
-              From rapid prototyping to mass production—we deliver IPC Class 3 compliant PCB Assembly, Wire Harnessing, and Box Builds.
+              From complex PCB assemblies to full electromechanical box builds, we deliver high-reliability solutions for automotive, medical, and industrial applications.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
@@ -86,7 +89,7 @@ export function HeroSection() {
                 size="lg"
                 className="bg-white text-[#1e5a8e] hover:bg-white/90 font-semibold"
               >
-                <Link href="/contact">Get Started</Link>
+                <Link href="/contact">Get a Quote</Link>
               </Button>
               {/* Updated Button to link to /services */}
               <Button

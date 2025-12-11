@@ -45,38 +45,38 @@ export default function GlobalPurchasingPage() {
 
   const offerings = [
     {
-      title: "Global Component Sourcing",
-      description: "Strategic sourcing of electronic components from qualified global suppliers.",
+      title: "Franchised Distribution",
+      description: "Direct procurement from authorized distributors (DigiKey, Mouser, Arrow, Avnet) for 100% traceability.",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Global%20Purchasing%202-7FHY3dWqix92oGFzI5wjCrPrlII6i6.jpg",
     },
     {
-      title: "Cost Optimization & Negotiation",
-      description: "Volume-based negotiation, alternate sourcing, and cost-down programs.",
+      title: "Shortage Sourcing",
+      description: "Access to vetted independent stocking distributors with rigorous anti-counterfeit testing (ERA/IDEA standards).",
       image:
         "https://images.pexels.com/photos/4968396/pexels-photo-4968396.jpeg?auto=compress&cs=tinysrgb&w=800",
     },
     {
-      title: "Supplier Qualification",
-      description: "End-to-end supplier evaluation, audits, and onboarding for long-term reliability.",
+      title: "Consolidated Logistics",
+      description: "Weekly air/sea consolidations from North America, Europe, and Asia to optimize freight costs.",
       image:
         "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=800",
     },
     {
-      title: "Risk & Obsolescence Management",
-      description: "Lifecycle tracking, last-time-buy planning, and risk mitigation for critical parts.",
+      title: "Obsolescence Management",
+      description: "Proactive PCN/EOL monitoring and Last Time Buy (LTB) strategy execution for long-lifecycle products.",
       image:
         "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=800",
     },
     {
-      title: "Logistics & Consolidation",
-      description: "Global logistics coordination, shipment consolidation, and customs support.",
+      title: "Custom Mechanicals",
+      description: "Sourcing of machined parts, extrusion, and injection molding tools from audited Asian partners.",
       image:
         "https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=800",
     },
     {
-      title: "Inventory & Buffer Stock",
-      description: "Strategic stocking models to support JIT deliveries and reduce line-down risk.",
+      title: "Kitting & VMI",
+      description: "Full BOM kitting, vacuum sealing, and Vendor Managed Inventory (VMI) for JIT delivery.",
       image:
         "https://www.versaclouderp.com/blog/wp-content/uploads/2025/03/Essentials-of-Inventory-What-is-Buffer-Stock.png",
     },
@@ -87,7 +87,7 @@ export default function GlobalPurchasingPage() {
       {/* HERO */}
       <section
         ref={heroRef}
-        className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-12 md:py-16"
+        className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-24 md:py-36"
       >
         {/* Background video / image overlay */}
         <div className="absolute inset-0">
@@ -106,7 +106,7 @@ export default function GlobalPurchasingPage() {
           <div className="absolute bottom-0 left-10 h-72 w-72 rounded-full bg-emerald-400/15 blur-3xl" />
         </div>
 
-        <div className="relative z-10 w-full max-w-none px-6 md:px-12 mx-auto">
+        <div className="relative z-10 container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] items-center">
             {/* Left */}
             <motion.div
@@ -124,41 +124,40 @@ export default function GlobalPurchasingPage() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight mb-5 text-balance">
                 Global{" "}
                 <span className="bg-gradient-to-r from-cyan-300 via-sky-300 to-emerald-300 bg-clip-text text-transparent">
-                  Sourcing & Supply
+                  Sourcing Network
                 </span>{" "}
-                for Your Builds
+                with Zero Risk
               </h1>
 
               <p className="text-base md:text-lg text-slate-200/90 mb-8 max-w-2xl leading-relaxed">
-                JINST’s global purchasing team secures critical components, metal parts, harness materials,
-                plastics, and custom parts from a vetted worldwide network — fully aligned to your wire harness,
-                PCB assembly, and box-build requirements.
+                We take the headache out of component sourcing. By aggregating demand across customers and buying directly from
+                franchised distributors in US, Europe and Asia, we ensure genuine parts, better pricing, and on-time delivery.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-10">
                 <Link href="/contact">
                   <Button className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold px-7 py-5 text-base shadow-lg shadow-cyan-500/30">
-                    Share Your BOM
+                    Upload Your BOM
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <Link href="/contact">
+                {/* <Link href="/contact">
                   <Button
                     variant="outline"
                     className="border-slate-500/70 bg-slate-900/40 text-slate-50 hover:bg-slate-800/80 hover:text-white"
                   >
                     Book a Call with JINST
                   </Button>
-                </Link>
+                </Link> */}
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {[
-                  { label: "Global Suppliers", value: "150+", icon: Warehouse },
-                  { label: "Cost Savings", value: "8–18%", icon: DollarSign },
-                  { label: "Countries Covered", value: "10+", icon: Globe2 },
-                  { label: "On-Time Delivery", value: "98%", icon: Truck },
+                  { label: "Franchised Lines", value: "50+", icon: Warehouse },
+                  { label: "Cost Savings", value: "15-20%", icon: DollarSign },
+                  { label: "Lead Time", value: "Ex-Stock", icon: Zap },
+                  { label: "Fake Parts", value: "0%", icon: ShieldCheck },
                 ].map((stat, i) => {
                   const Icon = stat.icon
                   return (
@@ -210,18 +209,18 @@ export default function GlobalPurchasingPage() {
                 <div className="rounded-2xl border border-slate-700/80 bg-slate-950/80 p-4 text-xs text-slate-200 flex items-start gap-3">
                   <ShieldCheck className="h-5 w-5 text-emerald-400 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-sm mb-1">Qualified Supplier Network</div>
+                    <div className="font-semibold text-sm mb-1">Zero Counterfeit Policy</div>
                     <p className="text-slate-400 text-[11px] leading-snug">
-                      Audited partners for metals, plastics, harness materials, PCBs, and enclosures.
+                      We buy primarily from authorized distributors.
                     </p>
                   </div>
                 </div>
                 <div className="rounded-2xl border border-slate-700/80 bg-slate-950/80 p-4 text-xs text-slate-200 flex items-start gap-3">
                   <LineChart className="h-5 w-5 text-cyan-400 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-sm mb-1">Aligned with JINST Manufacturing</div>
+                    <div className="font-semibold text-sm mb-1">BOM Scrubbing</div>
                     <p className="text-slate-400 text-[11px] leading-snug">
-                      Purchasing integrated with JINST wire harness, PCB, and box-build schedules.
+                      Validation of every part number against global stocks.
                     </p>
                   </div>
                 </div>
@@ -232,8 +231,8 @@ export default function GlobalPurchasingPage() {
       </section>
 
       {/* WHAT WE DO */}
-      <section className="py-12 md:py-16 bg-slate-50">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section className="py-16 md:py-24 bg-slate-50 px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -242,25 +241,24 @@ export default function GlobalPurchasingPage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-[#0066CC] to-[#00A896] bg-clip-text text-transparent">
-                What We Do in Global Purchasing
+                Sourcing as a Service
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4 text-sm md:text-base">
-                JINST acts as your extended procurement team — identifying, qualifying, and managing suppliers across
-                Asia and beyond, tightly integrated with our own manufacturing units.
+                JINST acts as your extended procurement team. We identify, qualify, and manage the flow of materials so you don't have to.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6 text-sm md:text-base">
-                From electronic components and connectors to sheet metal, plastics, and custom machined parts, we
-                ensure material availability, competitive pricing, and consistent quality aligned to your build plans.
+                Whether you need a rare FPGA, a custom-turned connector, or just a lower price on a microcontroller, our team leverages its
+                combined purchasing power to get you the best deal.
               </p>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-4 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-100 shadow-sm">
-                  <div className="text-2xl font-bold text-[#0066CC] mb-1">150+</div>
-                  <div className="text-xs md:text-sm text-gray-600 font-medium">Qualified Global Suppliers</div>
+                  <div className="text-2xl font-bold text-[#0066CC] mb-1">Weekly</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Consolidated shipments</div>
                 </div>
                 <div className="p-4 rounded-xl bg-gradient-to-br from-emerald-50 to-teal-100 border border-teal-100 shadow-sm">
-                  <div className="text-2xl font-bold text-[#00A896] mb-1">8–18%</div>
-                  <div className="text-xs md:text-sm text-gray-600 font-medium">Typical Cost Savings</div>
+                  <div className="text-2xl font-bold text-[#00A896] mb-1">Open Book</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Pricing Model Available</div>
                 </div>
               </div>
             </motion.div>
@@ -294,8 +292,8 @@ export default function GlobalPurchasingPage() {
       </section>
 
       {/* CAPABILITIES GRID */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section className="py-16 md:py-24 bg-white px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -303,44 +301,44 @@ export default function GlobalPurchasingPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#0066CC] to-[#00A896] bg-clip-text text-transparent">
-              Global Purchasing Capabilities
+              Purchasing Power
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
-              From component sourcing to end-to-end logistics, JINST manages the complete procurement lifecycle.
+              We cover the full spectrum of electronic and mechanical commodities.
             </p>
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "Electronics & Semiconductors",
+                title: "Semiconductors",
                 description:
-                  "Actives, passives, connectors, relays, sensors, power devices, and custom electronics assemblies.",
-                icon: CpuIconPlaceholder, // we'll define a small placeholder below
+                  "Direct accounts with major distributors for MCUs, FPGAs, Memories, and Power ICs.",
+                icon: CpuIconPlaceholder,
               },
               {
-                title: "Metal & Mechanical Parts",
-                description: "Sheet metal, machined parts, brackets, cabinets, chassis, and mechanical hardware.",
-                icon: Factory,
-              },
-              {
-                title: "Plastics & Enclosures",
-                description: "Injection molded parts, custom housings, and plastic enclosures for assemblies.",
-                icon: PackageSearch,
-              },
-              {
-                title: "Harness & Cable Materials",
-                description: "Cables, connectors, terminals, sleeves, and accessories for wire harness builds.",
+                title: "Passives & Electromechanical",
+                description: "Volume agreements for capacitors, resistors, relays, and switches to ensure stock.",
                 icon: Zap,
               },
               {
-                title: "Global Logistics",
-                description: "Ocean, air, and courier logistics with consolidation and customs documentation support.",
+                title: "Custom Mechanics",
+                description: "Sheet metal, machined aluminum, and injection molded plastics from qualified partners.",
+                icon: Factory,
+              },
+              {
+                title: "Connectors & Cables",
+                description: "Sourcing of authentic connectors (TE, Molex, JST) and high-quality equivalents.",
+                icon: PackageSearch,
+              },
+              {
+                title: "Import & Customs",
+                description: "We handle all HSN classification, duty payments, and customs clearance.",
                 icon: Ship,
               },
               {
-                title: "Supplier & Quality Management",
-                description: "Supplier audits, PPAP, incoming inspection, and continuous performance tracking.",
+                title: "Shortage Management",
+                description: "Rapid response capability to find cross-references for out-of-stock parts.",
                 icon: ShieldCheck,
               },
             ].map((item, index) => {
@@ -369,52 +367,37 @@ export default function GlobalPurchasingPage() {
       </section>
 
       {/* SUPPLIER NETWORK SECTION */}
-      <section className="py-12 md:py-16 bg-slate-900 text-white">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section className="py-16 md:py-24 bg-slate-900 text-white px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            whileHover={{ scale: 1.02 }}
           >
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4">Integrated Supplier Network</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4">Trusted Sources Only</h2>
             <p className="text-slate-300 max-w-2xl mx-auto text-sm md:text-base">
-              A curated ecosystem of manufacturers, distributors, and logistics partners aligned with JINST operations.
+              The grey market is risky. We stick to the authorized chain whenever possible.
             </p>
           </motion.div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "Tier-1 Manufacturers",
-                description: "Direct relationships with component and mechanical part manufacturers.",
+                title: "Franchised Distributors",
+                description: "DigiKey, Mouser, Newark, Element14, Arrow, Avnet, Future.",
                 icon: Factory,
               },
               {
-                title: "Distribution Partners",
-                description: "Global distributors and stockists for quick-turn and shortage management.",
+                title: "Direct from Factory",
+                description: "Direct lines with select manufacturers for high-volume runners.",
                 icon: Warehouse,
               },
               {
-                title: "Harness & Box-Build Partners",
-                description:
-                  "Specialized houses aligned with JINST wire harness, PCB, and box-build operations where needed.",
-                icon: Zap,
-              },
-              {
-                title: "Logistics Partners",
-                description: "Freight forwarders, couriers, and 3PL partners integrated into our planning.",
-                icon: Truck,
-              },
-              {
-                title: "Quality & Inspection Labs",
-                description: "Independent testing and inspection partners for critical and high-reliability parts.",
+                title: "Vetted Independent",
+                description: "Strictly audited brokers only for obsolete/EOL requirements with test reports.",
                 icon: ShieldCheck,
-              },
-              {
-                title: "Local & Regional Vendors",
-                description: "Near-site suppliers to support urgent requirements and serviceability.",
-                icon: Globe2,
               },
             ].map((item, index) => {
               const Icon = item.icon
@@ -437,15 +420,15 @@ export default function GlobalPurchasingPage() {
         </div>
       </section>
 
-      {/* WHAT WE OFFER – CARDS */}
-      <section className="py-12 md:py-16 bg-gradient-to-b from-slate-50 to-white">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      {/* WHATS IN IT FOR YOU – CARDS */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#0066CC] to-[#00A896] bg-clip-text text-transparent">
-              What We Offer
+              Why use JINST Sourcing?
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
-              End-to-end global purchasing services designed around your manufacturing and product roadmap.
+              Save time, save money, and avoid the risk of fake parts.
             </p>
           </div>
 
@@ -482,14 +465,13 @@ export default function GlobalPurchasingPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-[#0066CC] via-sky-600 to-[#00A896] text-white">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto text-center">
+      <section className="py-16 md:py-20 bg-gradient-to-br from-[#0066CC] via-sky-600 to-[#00A896] text-white px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance drop-shadow-lg">
-            Ready to Streamline Your Global Sourcing with JINST?
+            Ready to Streamline Your Global Sourcing?
           </h2>
           <p className="text-base md:text-lg text-white/95 mb-8 text-pretty drop-shadow-md">
-            Share your BOM, target costs, and build schedules. Our global purchasing team will come back with an
-            aligned sourcing and supply plan customized for your products.
+            Send us your BOM for a free scrub and cost estimation. We'll identify risks and savings in 48 hours.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
@@ -497,23 +479,14 @@ export default function GlobalPurchasingPage() {
                 size="lg"
                 className="bg-white text-[#0066CC] hover:bg-slate-100 shadow-xl hover:shadow-2xl transition-all font-semibold"
               >
-                Share Your BOM
+                Upload BOM
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link href="/contact">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white/15 hover:text-white bg-white/5 backdrop-blur-sm shadow-lg"
-              >
-                Book a Call with JINST
               </Button>
             </Link>
           </div>
           <div className="mt-6 flex items-center justify-center gap-2 text-xs text-white/80">
             <CheckCircle2 className="h-4 w-4" />
-            <span>Ideal for wire harness, PCB assembly, and complete box-build programs.</span>
+            <span>Confidentiality Guaranteed. NDA available on request.</span>
           </div>
         </div>
       </section>
@@ -541,4 +514,3 @@ const CpuIconPlaceholder = (props: any) => (
     <path d="M9 2v2M15 2v2M9 22v-2M15 22v-2M2 9h2M2 15h2M22 9h-2M22 15h-2" />
   </svg>
 );
-

@@ -10,7 +10,7 @@ export function StatsSection() {
       label: "Years in Business",
       value: "25+",
       suffix: "Years",
-      description: "Since 1999, we've refined our manufacturing processes to deliver consistent quality.",
+      description: "established in 2001. Delivering consistent quality and manufacturing excellence for over two decades.",
       icon: Shield,
       color: "blue"
     },
@@ -19,7 +19,7 @@ export function StatsSection() {
       label: "Quality Standards",
       value: "ISO",
       suffix: "9001",
-      description: "Rigorous quality management systems ensuiring every board meets IPC standards.",
+      description: "Certified to ISO 9001:2015. We strictly adhere to IPC-A-610 Class 2 & 3 standards for zero-defect reliability.",
       icon: Award,
       color: "emerald"
     },
@@ -28,7 +28,7 @@ export function StatsSection() {
       label: "Industries Served",
       value: "12+",
       suffix: "Sectors",
-      description: "Trusted by Automotive, Medical, Industrial, and IoT companies across India.",
+      description: "Deep expertise in Automotive, Medical, Industrial Automation, and Power Electronics sectors.",
       icon: TrendingUp,
       color: "purple"
     },
@@ -37,7 +37,7 @@ export function StatsSection() {
       label: "Global Reach",
       value: "100%",
       suffix: "Export",
-      description: "Compliant with international shipping and documentation standards.",
+      description: "Full-service global logistics including DDP shipping and customs handling for seamless delivery worldwide.",
       icon: Globe2,
       color: "cyan"
     }
@@ -62,14 +62,14 @@ export function StatsSection() {
             </div>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-              Why Industry Leaders <br />
+              Why Leading OEMs <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-600">
-                Trust Jayshree Instruments for Mission-Critical Electronics
+                Partner with Jayshree Instruments
               </span>
             </h2>
 
             <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              We don't just assemble boards; we engineer reliability. Our facility combines automated precision with skilled manual craftsmanship to handle your most complex builds.
+              We go beyond assembly to offer comprehensive manufacturing solutions. From design validation to global logistics, we ensure your product's success at every stage.
             </p>
           </motion.div>
         </div>

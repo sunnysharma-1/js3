@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Package, ArrowRight, Zap, CheckCircle, TrendingUp, Shield } from "lucide-react"
+import { Package, ArrowRight, Zap, CheckCircle, TrendingUp, Shield, Settings, Wrench } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
@@ -10,36 +10,36 @@ import { motion } from "framer-motion"
 export default function BoxBuildPage() {
   const offerings = [
     {
-      title: "Mechanical Assembly",
-      description: "Precision mechanical assembly including chassis, enclosures, and structural components.",
+      title: "Electromechanical Integration",
+      description: "Seamless integration of PCBs, harnessing, chassis, and displays with torque-calibrated assembly.",
       image: "https://vectorbluehub.com/zdjecia/artykul/80/559/1920x1080/4/Box-Build__90_.JPG",
     },
     {
-      title: "PCB Integration",
-      description: "Seamless integration of PCBs into enclosures with proper mounting and alignment.",
+      title: "Cable Routing & Management",
+      description: "Industrial-grade cable dressing, labeling, and routing for clean airflow and serviceability.",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20Assembly%20Service%202-2YYQ5PDb7mMIThMaQssDFdHxQRP1nT.png",
     },
     {
-      title: "Wire Harness Integration",
-      description: "Complete wire harness routing and connection for all internal systems.",
+      title: "Potting & Conformal Coating",
+      description: "Automated potting and conformal coating for IP67/IP68 environmental sealing.",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20-%20Plant%20Photo-Jz7vz9fkVonxheq1i1YsWivgJON7xV.jpg",
     },
     {
-      title: "System Testing",
-      description: "Comprehensive functional and environmental testing of complete assemblies.",
+      title: "System-Level Testing",
+      description: "Full functional validation, high-voltage safety testing (hipot), and burn-in cycling.",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Testing-KDadL2g4iPPdYLLzkn6aSKKGfW8jJP.jpg",
     },
     {
-      title: "Packaging & Labeling",
-      description: "Professional packaging, labeling, and documentation for distribution.",
+      title: "Software Loading & Config",
+      description: "Firmware flashing, MAC address serialization, and customer-specific configuration loading.",
       image:
         "https://blog.epectec.com/hs-fs/hubfs/Blog/hmi-product-packed-before-delivery.jpg?width=600&name=hmi-product-packed-before-delivery.jpg",
     },
     {
-      title: "Quality Assurance",
-      description: "Rigorous QA processes ensuring every unit meets specifications.",
+      title: "Final Packaging",
+      description: "Retail-ready packaging with custom foam inserts, user manuals, and accessory kitting.",
       image:
         "https://www.protoexpress.com/wp-content/uploads/2021/12/image4-6.png",
     },
@@ -48,7 +48,7 @@ export default function BoxBuildPage() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
       {/* HERO – darker overlay applied */}
-      <section className="relative overflow-hidden bbg-linear-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-12 md:py-16">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-24 md:py-36">
         {/* Background image + strong dark overlay */}
         <div className="absolute inset-0">
           <Image
@@ -69,7 +69,7 @@ export default function BoxBuildPage() {
           <div className="absolute bottom-0 left-10 h-72 w-72 rounded-full bg-emerald-400/20 blur-3xl" />
         </div>
 
-        <div className="relative z-10 w-full max-w-none px-6 md:px-12 mx-auto">
+        <div className="relative z-10 container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] items-center">
             {/* Left: copy + stats */}
             <motion.div
@@ -78,29 +78,29 @@ export default function BoxBuildPage() {
               transition={{ duration: 0.8 }}
             >
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/40 bg-slate-900/70 px-4 py-2 backdrop-blur">
-                <Package className="h-4 w-4 text-emerald-300" />
+                <Settings className="h-4 w-4 text-emerald-300" />
                 <span className="text-xs font-medium uppercase tracking-[0.18em] text-emerald-100">
-                  Box Build & Final Assembly
+                  Electromechanical Integration
                 </span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight mb-5 text-balance">
-                Turnkey{" "}
+                Complete{" "}
                 <span className="bg-gradient-to-r from-cyan-300 via-emerald-300 to-teal-200 bg-clip-text text-transparent">
-                  Box Build Solutions
+                  Product Assembly
                 </span>{" "}
-                for Complete Products
+                ready for shipment.
               </h1>
 
               <p className="text-base md:text-lg text-slate-200/90 mb-8 max-w-2xl leading-relaxed">
-                From mechanical assembly and PCB integration to harness routing, testing, labeling, and packaging—
-                JINST delivers shipment-ready units built to your work instructions and quality standards.
+                Beyond just PCBA. We handle complex chassis assembly, cable routing, potting, and software configuration.
+                Your product leaves our floor tested, packed, and ready for the end-user.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-10">
                 <Link href="/contact">
                   <Button className="bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-semibold px-7 py-5 text-base shadow-lg shadow-emerald-500/30">
-                    Request a Quote
+                    Get a Quote
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
@@ -109,7 +109,7 @@ export default function BoxBuildPage() {
                     variant="outline"
                     className="border-slate-500/70 bg-slate-900/40 text-slate-50 hover:bg-slate-800/80 hover:text-white"
                   >
-                    View Process
+                    View Capabilities
                   </Button>
                 </Link>
               </div>
@@ -117,10 +117,10 @@ export default function BoxBuildPage() {
               {/* Stats */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-xl">
                 {[
-                  { label: "Box Build Projects", value: "300+", icon: Package },
-                  { label: "Final QA Yield", value: "> 99%", icon: TrendingUp },
-                  { label: "Units Tested", value: "100%", icon: CheckCircle },
-                  { label: "On-Time Delivery", value: "98%", icon: Shield },
+                  { label: "Daily Output", value: "500+", icon: Package },
+                  { label: "IP Rating", value: "IP67/68", icon: Shield },
+                  { label: "Test Coverage", value: "100%", icon: CheckCircle },
+                  { label: "On-Time Ship", value: "99.2%", icon: TrendingUp },
                 ].map((stat, i) => {
                   const Icon = stat.icon
                   return (
@@ -170,20 +170,20 @@ export default function BoxBuildPage() {
                 transition={{ duration: 0.7, delay: 0.3 }}
               >
                 <div className="rounded-2xl border border-slate-700/80 bg-slate-950/80 p-4 text-xs text-slate-200 flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-emerald-300 mt-0.5" />
+                  <Wrench className="h-5 w-5 text-emerald-300 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-sm mb-1">Mechanical + Electrical Integration</div>
+                    <div className="font-semibold text-sm mb-1">Precision Assembly</div>
                     <p className="text-slate-400 text-[11px] leading-snug">
-                      Enclosures, PCBs and harnesses built and tested as one complete system.
+                      Torque-controlled fastening and tamper-proof sealing.
                     </p>
                   </div>
                 </div>
                 <div className="rounded-2xl border border-slate-700/80 bg-slate-950/80 p-4 text-xs text-slate-200 flex items-start gap-3">
                   <Zap className="h-5 w-5 text-cyan-300 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-sm mb-1">Single-Point Responsibility</div>
+                    <div className="font-semibold text-sm mb-1">HV & Safety Test</div>
                     <p className="text-slate-400 text-[11px] leading-snug">
-                      One team owns assembly, testing and pack-out for shipment-ready units.
+                      Electrical safety compliance verified before shipping.
                     </p>
                   </div>
                 </div>
@@ -209,8 +209,8 @@ export default function BoxBuildPage() {
       </section>
 
       {/* What We Do */}
-      <section className="py-12 md:py-16">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -219,31 +219,30 @@ export default function BoxBuildPage() {
               transition={{ duration: 0.6 }}
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md rounded-full border border-teal-200/60 shadow-sm mb-6">
-                <Package className="h-5 w-5 text-[#00A896]" />
-                <span className="text-sm font-medium text-[#00A896]">Box Build & Final Assembly</span>
+                <Settings className="h-5 w-5 text-[#00A896]" />
+                <span className="text-sm font-medium text-[#00A896]">System Integration</span>
               </div>
 
               <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-[#0066CC] to-[#00A896] bg-clip-text text-transparent">
                 What We Do
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4 text-base text-slate-700">
-                Our box build services bring together mechanical, electrical and test operations into one smooth
-                workflow. You ship us components or sub-assemblies, and we return fully built, tested and packed units.
+                Box build at JINST extends beyond enclosure assembly. We orchestrate the entire electromechanical BOM, managing plastics, metalwork, and custom cabling to deliver a fully integrated product.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6 text-base text-slate-700">
-                We support new product introductions, engineering builds and ongoing production with clear work
-                instructions, controlled change management and reliable delivery.
+                Our technicians follow detailed digital work instructions for each step—thermal paste application, screw torque sequences,
+                gasket installation, and connector mating—ensuring consistency across thousands of units.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-5 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                  <div className="text-3xl font-bold text-[#0066CC] mb-1">100%</div>
-                  <div className="text-sm text-gray-700 font-medium">Tested & Verified</div>
-                  <p className="mt-1 text-xs text-slate-500">Every unit passes defined test gates.</p>
+                  <div className="text-lg font-bold text-[#0066CC] mb-1">Firmware Loading</div>
+                  <div className="text-sm text-gray-700 font-medium">Included</div>
+                  <p className="mt-1 text-xs text-slate-500">We flash and verify your code.</p>
                 </div>
                 <div className="p-5 bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                  <div className="text-3xl font-bold text-[#00A896] mb-1">Turnkey</div>
-                  <div className="text-sm text-gray-700 font-medium">Solutions</div>
-                  <p className="mt-1 text-xs text-slate-500">From kitting to final packaging.</p>
+                  <div className="text-lg font-bold text-[#00A896] mb-1">Drop Shipping</div>
+                  <div className="text-sm text-gray-700 font-medium">Available</div>
+                  <p className="mt-1 text-xs text-slate-500">Direct to your end customer.</p>
                 </div>
               </div>
             </motion.div>
@@ -267,42 +266,48 @@ export default function BoxBuildPage() {
       </section>
 
       {/* Assembly Process Showcase */}
-      <section id="process" className="py-12 md:py-16 bg-white">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section id="process" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="container max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#0066CC] to-[#00A896] bg-clip-text text-transparent">
-              Complete Assembly Process
+              Assembly Workflow
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-pretty text-base text-slate-600">
-              From metalwork and PCBs to fully tested, labelled and packed units—one integrated flow.
+              Sequential integration steps with quality gates at every stage.
             </p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                label: "Mechanical Assembly",
+                label: "Sub-Assembly Prep",
                 src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP4w_hWqMV9uLMjhDnOgx2pcYWBqROyAI3TQ&s",
+                desc: "Pre-forming cables, mounting standoffs, and heat-staking plastics."
               },
               {
                 label: "PCB Integration",
                 src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOWsLqu_IzWkbOCB4Cm-iWyV4seSDOYE5OZw&s",
+                desc: "Precise board mounting with ESD controls and alignment checks."
               },
               {
-                label: "Wire Harness Integration",
+                label: "Cable Routing",
                 src: "https://federalelec.com/wp-content/uploads/2024/06/DSC07005.jpg",
+                desc: "Clean routing with zip ties, clips, and strain relief."
               },
               {
-                label: "System Testing",
+                label: "System Configuration",
                 src: "/images/design-mode/Testing(1).jpg",
+                desc: "Firmware flashing and functional verification."
               },
               {
-                label: "Packaging & Labeling",
+                label: "Final QA",
                 src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSOWNkvINVrFu62i2DNdbJQwFjYwx5dFvPpg&s",
+                desc: "Cosmetic checks, gap verification, and safety labeling."
               },
               {
-                label: "Final QA & Release",
+                label: "Pack & Ship",
                 src: "https://www.viasion.com/wp-content/uploads/2024/12/Box-Build-Assembly.jpeg",
+                desc: "Custom foam, user manuals, and accessory kitting."
               },
             ].map((item, index) => (
               <motion.div
@@ -319,8 +324,9 @@ export default function BoxBuildPage() {
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items=end p-6">
-                  <p className="text-white font-medium text-sm">{item.label}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6">
+                  <p className="text-white font-bold text-lg mb-1">{item.label}</p>
+                  <p className="text-slate-300 text-xs">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -329,52 +335,51 @@ export default function BoxBuildPage() {
       </section>
 
       {/* Quality & Testing Standards */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 to-slate-800 text-white px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4">Quality & Testing Standards</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4">Validation & Safety</h2>
             <p className="text-gray-300 max-w-2xl mx-auto text-pretty text-sm md:text-base">
-              Testing is built into the process—not added at the end—so every unit behaves like a reference build in
-              the field.
+              We ensure every shipped unit is safe, updated, and fully functional.
             </p>
           </motion.div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "Functional Testing",
-                description: "Power-up, I/O, safety and feature validation against golden samples.",
+                title: "Functional Test FCT",
+                description: "Automated test rigs to exercise all inputs, outputs, and communication ports.",
                 icon: CheckCircle,
               },
               {
-                title: "Environmental Testing",
-                description: "Temperature, humidity and vibration test profiles for demanding environments.",
+                title: "Burn-In Testing",
+                description: "Operating units at elevated temperatures to screen for infant mortality failures.",
                 icon: Zap,
               },
               {
-                title: "Visual & Mechanical Inspection",
-                description: "Torque, alignment, labelling and cosmetic checks for every build.",
+                title: "Hipot & Ground Bond",
+                description: "Electrical safety testing for mains-powered devices to ensure user safety.",
                 icon: Shield,
               },
               {
-                title: "Documentation & Traceability",
-                description: "Serial/batch tracking, test reports and revision control in the pack.",
+                title: "Traceability",
+                description: "Serial number tracking for every board and major sub-assembly in the unit.",
                 icon: TrendingUp,
               },
               {
-                title: "Compliance Verification",
-                description: "Builds aligned to your compliance and regulatory requirements.",
+                title: "Environmental Seal",
+                description: "Vacuum or pressure decay testing to verify IP ratings (water/dust proofing).",
                 icon: CheckCircle,
               },
               {
-                title: "Performance Validation",
-                description: "Soak tests and long-run validation configured to your field conditions.",
-                icon: Zap,
+                title: "Software Config",
+                description: "Uploading the correct firmware version and calibration data for the specific market.",
+                icon: Settings,
               },
             ].map((item, index) => {
               const IconComponent = item.icon
@@ -398,8 +403,8 @@ export default function BoxBuildPage() {
       </section>
 
       {/* Industry Applications */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="container max-w-7xl mx-auto">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -413,22 +418,21 @@ export default function BoxBuildPage() {
               </div>
 
               <h2 className="text-3xl md:text-4xl font-semibold mb-6 bg-gradient-to-r from-[#0066CC] to-[#00A896] bg-clip-text text-transparent">
-                Built for Real-World Products
+                Proven Across Industries
               </h2>
 
               <p className="text-muted-foreground leading-relaxed mb-6 text-base text-slate-700">
-                From compact IoT products to rugged industrial panels, our box build capability is tuned for multiple
-                environments, compliances and life-cycle expectations.
+                From handheld medical devices to 19-inch rack-mount industrial controllers, we have the floor space and the expertise.
               </p>
 
               <div className="space-y-4">
                 {[
-                  "Consumer Electronics & IoT Devices",
-                  "Industrial Control Panels & Drives",
-                  "Medical & Lab Equipment",
-                  "Telecom & Network Infrastructure",
-                  "Automotive Electronics & EV Subsystems",
-                  "Aerospace & Defense Assemblies (program specific)",
+                  "Industrial Controllers & PLCs",
+                  "Medical Diagnostic Devices",
+                  "EV Charging Stations",
+                  "IoT Gateways & Sensors",
+                  "Telecommunications Rack Units",
+                  "Consumer Appliances",
                 ].map((industry, index) => (
                   <motion.div
                     key={industry}
@@ -464,14 +468,14 @@ export default function BoxBuildPage() {
       </section>
 
       {/* What We Offer – cards */}
-      <section className="py-12 md:py-16 bg-gradient-to-b from-slate-50 to-white">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#0066CC] to-[#00A896] bg-clip-text text-transparent">
-              What We Offer
+              Turnkey Capabilities
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-pretty text-base text-slate-600">
-              A modular set of capabilities that can be combined into a complete turnkey box build program.
+              Modular services to take your product from PCBA to retail-ready box.
             </p>
           </div>
 
@@ -484,7 +488,7 @@ export default function BoxBuildPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
               >
-                <Card className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200 overflow-hidden group">
+                <Card className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200 overflow-hidden group bg-white">
                   <div className="relative h-48 overflow-hidden">
                     <Image
                       src={offering.image || "/placeholder.svg"}
@@ -505,30 +509,29 @@ export default function BoxBuildPage() {
       </section>
 
       {/* Get Started CTA */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-[#0066CC] via-[#007FAF] to-[#00A896] text-white">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section className="py-16 md:py-20 bg-gradient-to-br from-[#0066CC] via-[#007FAF] to-[#00A896] text-white px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-6xl mx-auto">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1.7fr)_minmax(0,1.1fr)] items-center">
             {/* Left: messaging */}
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/30 text-xs font-medium mb-4">
                 <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse" />
-                Ready when your product is.
+                Simplify your supply chain.
               </div>
 
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance drop-shadow-lg">
-                Ready to scale your box build program?
+                Ready to consolidate your manufacturing?
               </h2>
 
               <p className="text-sm md:text-base text-white/90 mb-6 max-w-xl leading-relaxed">
-                Share your BOM, enclosure drawings and test requirements. Our engineering and operations teams will
-                revert with a clear build strategy, estimated timelines and quality checkpoints tailored to your product.
+                Stop managing five different vendors for one product. Move your final assembly to JINST and get a single point of accountability for quality and schedule.
               </p>
 
               <div className="space-y-3">
                 {[
-                  "DFM review for mechanical + electrical integration",
-                  "Transparent costing and lead-time assumptions",
-                  "Pilot build plan before full-scale rollout",
+                  "Reduced logistics and handling costs",
+                  "Unified quality control for the entire product",
+                  "Direct shipment to end-users (Drop-shipping)",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-2 text-sm text-white/95">
                     <CheckCircle className="h-4 w-4 mt-0.5 text-emerald-300" />
@@ -540,9 +543,9 @@ export default function BoxBuildPage() {
 
             {/* Right: contact block */}
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/25 p-6 shadow-xl">
-              <h3 className="text-lg font-semibold mb-2">Talk to our team</h3>
+              <h3 className="text-lg font-semibold mb-2">Start a conversation</h3>
               <p className="text-xs md:text-sm text-white/85 mb-5">
-                Choose how you&apos;d like to start the conversation. We usually respond within one business day.
+                Send us your assembly drawings or just a photo of your current setup.
               </p>
 
               <div className="space-y-3 mb-6">
@@ -559,7 +562,7 @@ export default function BoxBuildPage() {
               <div className="flex flex-wrap gap-3">
                 <Link href="/contact">
                   <Button className="bg-white text-[#0066CC] hover:bg-white/90 shadow-lg px-5 py-2 text-sm md:text-base">
-                    Share Project Details
+                    Request Integration Quote
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
@@ -568,14 +571,11 @@ export default function BoxBuildPage() {
                     variant="outline"
                     className="border-white text-white hover:bg-white/15 bg-transparent px-5 py-2 text-sm md:text-base"
                   >
-                    Schedule a Call
+                    Schedule a Visit
                   </Button>
                 </Link>
               </div>
 
-              <p className="mt-4 text-[11px] md:text-xs text-white/70">
-                Prefer NDA first? Mention it in your message and we&apos;ll share a standard template or review yours.
-              </p>
             </div>
           </div>
         </div>

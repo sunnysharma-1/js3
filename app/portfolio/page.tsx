@@ -29,66 +29,66 @@ export default function PortfolioPage() {
   const projects = [
     {
       id: 1,
-      title: "Advanced PCB Prototype Development",
+      title: "IoT Controller Board",
       category: "prototyping",
       description:
-        "Complex multi-layer PCB prototype with integrated power management, multiple ribbon cable connections, and advanced testing protocols. Delivered rapid prototyping with full functional testing within 48 hours.",
+        "4-layer FR4 with impedance controlled traces for the RF module. Delivered 5 functional units in 48 hours for field testing in an oil refinery.",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Prototype%201-lW7RnR3FC9GA1M4VzePrxYhgAgJAGA.jpg",
-      specs: ["Multi-layer PCB", "48-hour turnaround", "Full functional testing"],
+      specs: ["Impedance Control", "FR4 High TG", "RF Testing"],
       industry: "Industrial Automation",
     },
     {
       id: 2,
-      title: "Automated PCB Assembly Line",
+      title: "Consumer Smart Home Hub",
       category: "manufacturing",
       description:
-        "State-of-the-art automated assembly line featuring robotic soldering, precision component placement, and real-time quality control. Capable of producing 10,000+ units per day with 99.9% accuracy.",
+        "High-volume consumer electronics run. 10k units/week. Automated conformal coating line used to meet humidity resistance requirements.",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB-lgCSelsub9Lfxylqe3lHChysLiUKQW.webp",
-      specs: ["Robotic assembly", "10K+ units/day", "99.9% accuracy"],
+      specs: ["Conformal Coating", "10k/week volume", "Retail Packaging"],
       industry: "Consumer Electronics",
     },
     {
       id: 3,
-      title: "Custom Wire Harness Solutions",
+      title: "Aerospace Control Harness",
       category: "wire-harness",
       description:
-        "Precision-engineered wire harness assemblies with custom connectors, color-coded wiring, and rigorous testing. Designed for harsh environments with IP67 protection and military-grade specifications.",
+        "IP67 rated assembly with MIL-SPEC connectors. 100% pull-tested and continuity checked. Used in drone ground control stations.",
       image:
         "/assets/Wire Harness 2.jpg",
-      specs: ["Custom connectors", "IP67 rated", "Military-grade"],
+      specs: ["MIL-SPEC D38999", "IP67 Rated", "Pull Testing"],
       industry: "Aerospace & Defense",
     },
     {
       id: 4,
-      title: "Multi-Conductor Cable Assembly",
+      title: "Fiber Optic Interconnect",
       category: "wire-harness",
       description:
-        "High-performance multi-conductor cables with shielded construction, precision termination, and extensive testing. Suitable for high-frequency applications and industrial environments.",
+        "Low-loss fiber splicing for telecom infrastructure. <0.1dB loss per splice maintained across 500+ units.",
       image:
         "/assets/Wire Harness 1.jpg",
-      specs: ["Shielded construction", "High-frequency", "Precision termination"],
+      specs: ["Fusion Splicing", "OTDR Testing", "Low Loss"],
       industry: "Telecommunications",
     },
     {
       id: 5,
-      title: "Complete Box Build Assembly",
+      title: "Medical Diagnostic Unit",
       category: "box-build",
       description:
-        "Full system integration including PCB assembly, mechanical housing, power supplies, and final testing. Complete turnkey solution from component sourcing to final product delivery.",
+        "ISO 13485 compliant assembly. We handle the display bonding, battery integration, and final sterile packaging.",
       image: "https://ecelectronics.com/wp-content/uploads/2019/08/MG_5326-scaled.jpg",
-      specs: ["Turnkey solution", "System integration", "Complete testing"],
+      specs: ["ISO 13485", "Clean Room Assembly", "Display Bonding"],
       industry: "Medical Devices",
     },
     {
       id: 6,
-      title: "Precision PCB Testing & QC",
+      title: "Automotive ECU Testing",
       category: "manufacturing",
       description:
-        "Comprehensive testing protocols including AOI, X-ray inspection, functional testing, and burn-in testing. ISO 9001 certified processes ensuring the highest quality standards.",
+        "Automated test fixture design. We built a custom bed-of-nails tester to flash firmware and verify CAN bus traffic in under 60 seconds.",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20Testing2-zuho0XuniXPHpC9ilOcON96hr8ZWAl.jpg",
-      specs: ["AOI inspection", "X-ray testing", "ISO 9001 certified"],
+      specs: ["Functional Test Jig", "CAN Bus Analysis", "Firmware Flashing"],
       industry: "Automotive",
     },
   ]
@@ -127,18 +127,18 @@ export default function PortfolioPage() {
                 className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium mb-8"
               >
                 <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
-                <span>Engineering Excellence</span>
+                <span>Proven Results</span>
               </motion.div>
 
               <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-8">
-                Transforming <br />
+                Industrial <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400">
-                  Ideas Into Reality
+                  Case Studies
                 </span>
               </h1>
 
               <p className="text-lg text-slate-400 mb-10 max-w-xl leading-relaxed">
-                From rapid prototyping to high-volume manufacturing, we deliver precision-engineered electronics solutions for the world's most demanding industries.
+                See how we solved specific thermal, signal integrity, and supply chain challenges for our clients.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-16">
@@ -345,9 +345,9 @@ export default function PortfolioPage() {
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-sm font-medium mb-4">
                   <Sparkles className="w-4 h-4" /> Featured Case Study
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Medical Device PCB Assembly</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">Case Study: Class 3 Medical Scale-Up</h2>
                 <p className="text-slate-400 text-lg leading-relaxed">
-                  A breakthrough in rapid medical prototyping. We helped a leading MedTech startup move from concept to clinical trial units in under 3 weeks.
+                  A breakthrough in traceability. We helped a MedTech startup ramp from 50 to 5000 units/mo while passing every FDA audit requirement.
                 </p>
               </div>
 
@@ -358,7 +358,7 @@ export default function PortfolioPage() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-1">The Challenge</h4>
-                    <p className="text-slate-400 text-sm">Strict ISO 13485 compliance requirements combined with an extremely tight investor deadline.</p>
+                    <p className="text-slate-400 text-sm">Strict component-level traceability was required for every resistor and capacitor on the board.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -367,7 +367,7 @@ export default function PortfolioPage() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-1">The Solution</h4>
-                    <p className="text-slate-400 text-sm">Parallel processing of PCB fabrication and component sourcing, utilizing our in-house X-ray inspection for immediate QC.</p>
+                    <p className="text-slate-400 text-sm">We integrated laser marking for unique PCB IDs and tied our pick-and-place machines to our MES for reel-to-board traceability.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -376,7 +376,7 @@ export default function PortfolioPage() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-1">The Result</h4>
-                    <p className="text-slate-400 text-sm">100% defect-free delivery of 50 prototype units, enabling the client to secure Series A funding.</p>
+                    <p className="text-slate-400 text-sm">Zero traceability gaps during the FDA audit. Client secured Series A funding based on manufacturing readiness.</p>
                   </div>
                 </div>
               </div>
@@ -402,20 +402,20 @@ export default function PortfolioPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "SMT Lines",
-                desc: "High-speed pick & place machines capable of 0201 components.",
+                title: "7-Zone Reflow",
+                desc: "Profiled for lead-free precision. Minimizes thermal shock.",
                 icon: Cpu,
                 image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB-lgCSelsub9Lfxylqe3lHChysLiUKQW.webp"
               },
               {
-                title: "Automated Optical Inspection",
-                desc: "100% visual inspection for component presence and polarity.",
+                title: "3D AOI Inspection",
+                desc: "Measures solder fillet height, not just presence.",
                 icon: Microscope,
                 image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20Testing2-zuho0XuniXPHpC9ilOcON96hr8ZWAl.jpg"
               },
               {
-                title: "Environmental Testing",
-                desc: "Thermal cycling and burn-in chambers for reliability testing.",
+                title: "Burn-In Chambers",
+                desc: "Active load testing at 85°C to weed out early failures.",
                 icon: Globe,
                 image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Testing-KDadL2g4iPPdYLLzkn6aSKKGfW8jJP.jpg"
               }
@@ -451,13 +451,13 @@ export default function PortfolioPage() {
           <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
             {[
               {
-                quote: "Jayshree Instruments delivered our prototypes in record time. Their engineering feedback actually improved our final design significantly.",
+                quote: "They flagged a BGA pad size issue that would have caused soldering defects. That catch alone saved us a 4-week respin cycle.",
                 author: "Sarah Chen",
                 role: "CTO, NextGen Robotics",
                 company: "Robotics"
               },
               {
-                quote: "The quality consistency for our high-volume run has been impeccable. A true partner in our supply chain.",
+                quote: "When the microcontroller went end-of-life, they sourced a pin-compatible alternative and validated it in 3 days. Production never stopped.",
                 author: "Michael Ross",
                 role: "Operations Director",
                 company: "AutoSystems Inc."

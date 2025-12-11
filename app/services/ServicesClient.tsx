@@ -28,18 +28,18 @@ const services = [
   {
     id: "pcb",
     icon: Cpu,
-    title: "PCB Assembly (PCBA)",
+    title: "PCB Assembly",
     path: "/services/pcb",
-    shortDesc: "IPC Class 3 compliant assembly with precision SMT & THT lines.",
+    shortDesc: "High-precision SMT & Mixed-Technology Assembly.",
     fullDesc:
-      "Precision PCBA manufacturing utilizing high-speed Pick & Place machines, automated solder paste inspection (SPI), and 12-zone reflow ovens. We handle everything from 01005 components to complex BGAs with zero-defect reliability.",
+      "State-of-the-art dual-lane SMT lines placing 01005 passives to large BGAs.  Integrated 3D SPI and AOI ensure IPC Class 3 compliance for mission-critical builds.",
     features: [
-      "0201/01005 Component Capability",
-      "BGA, uBGA, QFN, & CSP Handling",
-      "Automated Optical Inspection (AOI)",
-      "3D Solder Paste Inspection (SPI)",
-      "Conformal Coating & Potting",
-      "ICT & Flying Probe Testing",
+      "01005 & µBGA Placement",
+      "Dual-Lane SMT Capacity",
+      "Wave & Selective Soldering",
+      "Automated Conformal Coating",
+      "RoHS & Leaded Processes",
+      "3D SPI & 3D AOI Verification",
     ],
     image:
       "https://ecelectronics.com/wp-content/uploads/2025/05/shutterstock_2137865295-1-scaled-1.jpg",
@@ -48,18 +48,18 @@ const services = [
   {
     id: "prototyping",
     icon: Zap,
-    title: "Rapid Prototyping (NPI)",
+    title: "Rapid Prototyping",
     path: "/services/prototyping",
-    shortDesc: "Accelerated NPI services with DFM feedback in 24-48 hours.",
+    shortDesc: "Accelerated NPI Services from 48-hours.",
     fullDesc:
-      "Bridge the gap between design and production. Our dedicated NPI lines allow for rapid iterations, helping you validate electrical performance and mechanical fit before committing to mass production volume.",
+      "Dedicated NPI lines separate from mass production facilitate rapid validation. We move from data-pack to finished prototype without disrupting volume schedules.",
     features: [
-      "24-48 Hour Turnaround",
+      "48-Hour Quick Turn Option",
       "Comprehensive DFM/DFA Reports",
-      "BOM Scrubbing & Optimization",
-      "Pre-Compliance Validation",
-      "Small Batch Pilot Runs",
-      "Quick-Turn Printed Circuit Boards",
+      "Flying Probe Testing",
+      "BOM Scrubbing & Analysis",
+      "Component Sourcing Support",
+      "X-Ray Inspection (AXI)",
     ],
     image:
       "https://foxtronicsems.com/wp-content/uploads/2025/07/rapid-prototyping-img-2.jpg",
@@ -70,16 +70,16 @@ const services = [
     icon: Box,
     title: "Wire Harnessing",
     path: "/services/wire-harness",
-    shortDesc: "Automated cutting, stripping, and crimping solutions.",
+    shortDesc: "Automated Wire Processing & Cable Assembly.",
     fullDesc:
-      "Custom cable assemblies and wire harnesses for automotive, industrial, and medical applications. We utilize automated tooling for crimping and perform 100% pull-force and continuity testing.",
+      "In-house automated cutting, crimping, and testing capabilities. We engineer reliable interconnects for complex industrial, automotive, and medical systems.",
     features: [
-      "Automated Cutting & Stripping",
-      "Pull-Force Validation",
-      "Cross-Section Analysis",
-      "Continuity & Hi-Pot Testing",
+      "Automated Cut, Strip, Crimp",
+      "Pull Force Validation",
+      "Cirris Continuity Testing",
+      "Ultrasonic Welding",
       "Overmolding Capabilities",
-      "Mixed-Connector Assemblies",
+      "Global Connector Sourcing",
     ],
     image:
       "https://www.nai-group.com/wp-content/uploads/2018/08/43.-Testing-board-1.jpg",
@@ -88,18 +88,18 @@ const services = [
   {
     id: "design",
     icon: Wrench,
-    title: "Design Services",
+    title: "Design for Manufacturing",
     path: "/services/design-engineering",
-    shortDesc: "Schematic-to-Gerber design & BOM cost reduction.",
+    shortDesc: "DFM/DFA & Layout Optimization.",
     fullDesc:
-      "Our engineering team helps you optimize your product for manufacturability (DFM) and testability (DFT) from day one. We handle PCB layout, stackup design, and component selection to minimize production costs.",
+      "Bridging the gap between design and manufacturing. We optimize layouts for yield, cost reduction, and test coverage before the first board is spun.",
     features: [
-      "PCB Layout & Stackup Design",
-      "Signal Integrity & Thermal Analysis",
-      "BOM Cost Reduction (Value Eng.)",
-      "Firmware Development",
-      "Enclosure & Mechanical Design",
-      "Obsolecence Management",
+      "Schematic & Layout Review",
+      "Yield Optimization Analysis",
+      "Panelization Strategy",
+      "Thermal Management",
+      "DFT (Design for Test) Impl.",
+      "BOM Risk Assessment",
     ],
     image:
       "https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=1200",
@@ -108,38 +108,40 @@ const services = [
   {
     id: "box-build",
     icon: Package,
-    title: "Box Build Integration",
+    title: "Electromechanical Box Build",
     path: "/services/box-build",
-    shortDesc: "Turnkey system integration, firmware & functional test.",
+    shortDesc: "Full System Integration & Testing.",
     fullDesc:
-      "Complete system integration including electromechanical assembly, potting, ultrasonic welding, and clean-room assembly. We deliver finished goods ready for end-user distribution.",
+      "Complete system integration including firmware loading, functional testing, potting, and retail-ready packaging. Drop-shipped directly to your end-users.",
     features: [
-      "Electromechanical Assembly",
-      "Firmware Flashing & Config",
-      "Ultrasonic Welding",
-      "Potting & Encapsulation",
-      "End-of-Line Visual Quality Check",
-      "Retail Packaging & Logistics",
+      "Enclosure Assembly",
+      "Firmware Loading & Config",
+      "Functional Efficiency Test",
+      "Traceability & Genealogy",
+      "Custom Retail Packaging",
+      "Global Logistics & Fulfillment",
     ],
     image:
-      "https://www.pcbstartech.com/wp-content/uploads/2019/08/company-profile-2.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7rUuP0nbmi1FthU_e9zVr83qyDHq2fcvGSg&s",
     category: "Core Manufacturing",
   },
+
+
   {
     id: "after-sales",
     icon: Shield,
     title: "Lifecycle Support",
     path: "/services/after-sales-support",
-    shortDesc: "Global RMA management and component-level repair.",
+    shortDesc: "RMA Management & Repair Services.",
     fullDesc:
-      "Extend your product's lifecycle with our dedicated repair center. We handle warranty returns, analyzing failures down to the component level to provide root cause analysis and corrective actions.",
+      "Extending product lifecycles through component-level debug and repair. Our RMA services ensure field failures are analyzed and resolved efficiently.",
     features: [
-      "Component Level Debug",
+      "RMA Logistics Management",
       "BGA Rework & Reballing",
-      "Warranty Management (RMA)",
       "Root Cause Analysis (RCA)",
-      "Refurbishment & Upgrades",
-      "E-Waste Disposal Compliance",
+      "Firmware Upgrades",
+      "Refurbishment Services",
+      "Warranty Administration",
     ],
     image:
       "https://images.pexels.com/photos/8867439/pexels-photo-8867439.jpeg?auto=compress&cs=tinysrgb&w=1200",
@@ -148,12 +150,12 @@ const services = [
 ]
 
 const capabilities = [
-  { title: "ISO 9001:2015 Certified", description: "Consistent QMS standards for every build" },
-  { title: "IPC-A-610 Class 2 & 3", description: "Workmanship standards compliance" },
-  { title: "RoHS & REACH", description: "Environmental compliance for global markets" },
-  { title: "ESD S20.20", description: "Strict electrostatic discharge controls" },
-  { title: "ICT & FCT Testing", description: "100% functional verification available" },
-  { title: "Strategic Sourcing", description: "Direct distributor relationships & traceability" },
+  { title: "ISO 9001:2015 Certified", description: "Quality management system certification" },
+  { title: "IPC-A-610 Standards", description: "Adherence to industry assembly standards" },
+  { title: "RoHS Compliant", description: "Environmentally friendly manufacturing" },
+  { title: "ESD Protected", description: "Electrostatic discharge safe environment" },
+  { title: "Advanced Testing", description: "In-circuit and functional testing capabilities" },
+  { title: "Supply Chain Management", description: "Comprehensive component sourcing and management" },
 ]
 
 export default function ServicesClient() {
@@ -353,7 +355,7 @@ export default function ServicesClient() {
   return (
     <main ref={rootRef} className="min-h-screen bg-slate-950 text-slate-50">
       {/* HERO + LIVE EMS DASHBOARD */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden py-12 md:py-16 bg-[#0B1120]">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden py-10 sm:py-12 md:py-20 bg-[#0B1120]">
         {/* Dynamic Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[50%] rounded-full bg-sky-500/10 blur-[120px] animate-pulse" />
@@ -371,7 +373,7 @@ export default function ServicesClient() {
           />
         </div>
 
-        <div className="w-full max-w-none px-6 md:px-12 relative z-10 mx-auto">
+        <div className="container max-w-[1600px] relative z-10 px-4 md:px-8 mx-auto">
           <div className="grid gap-10 lg:gap-16 lg:grid-cols-2 items-center">
             {/* Left Side: Content */}
             <div className="flex flex-col items-start text-left">
@@ -380,18 +382,18 @@ export default function ServicesClient() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
                 </span>
-                <span>ISO 9001:2015 & IATF 16949 COMPLIANT</span>
+                <span>IPC Class 2 & 3 Proficient</span>
               </div>
 
               <h1 className="hero-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] mb-4 sm:mb-6">
-                Precision Electronics <br />
+                Your Production <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-emerald-400 drop-shadow-[0_0_30px_rgba(56,189,248,0.3)]">
-                  Manufacturing Scaled
+                  Partner
                 </span>
               </h1>
 
               <p className="hero-text text-sm sm:text-base md:text-lg text-slate-400 max-w-xl leading-relaxed mb-6 sm:mb-8">
-                From rapid NPI to mass production, we act as your strategic EMS partner, delivering high-reliability electronics with complete supply chain transparency.
+                We take your CAD files and turn them into physical boards. Whether it's one prototyping board or a ten-thousand unit production run, we handle the sourcing, assembly, and testing.
               </p>
 
               <div className="hero-cta flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 w-full sm:w-auto">
@@ -420,9 +422,9 @@ export default function ServicesClient() {
               {/* Stats Row */}
               <div className="hero-stats mt-6 sm:mt-8 grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 border-t border-slate-800/50 pt-6 sm:pt-8 w-full">
                 {[
-                  { value: "99.8%", label: "First Pass Yield" },
-                  { value: "50M+", label: "Components Placed" },
-                  { value: "Automotive", label: "Grade Quality" },
+                  { value: "99.9%", label: "First Pass Yield" },
+                  { value: "10M+", label: "Components Placed" },
+                  { value: "ISO", label: "9001:2015" },
                 ].map((stat, i) => (
                   <div key={i}>
                     <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">
@@ -526,17 +528,17 @@ export default function ServicesClient() {
       </section>
 
       {/* CORE SERVICE STACK (CLEAN DESIGN, NO SCROLL EFFECT) */}
-      <section id="core-services" className="bg-slate-50 py-12 md:py-16">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section id="core-services" className="bg-slate-50 py-10 sm:py-12 md:py-20">
+        <div className="container max-w-[1600px] px-4 md:px-8 mx-auto">
           <div className="mb-10 md:mb-16 flex flex-col items-center text-center">
             <span className="mb-3 inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-[11px] sm:text-xs font-bold uppercase tracking-wide text-sky-700">
               Service Tiers
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight">
-              Manufacturing Service Stack
+              Core Service Stack
             </h2>
             <p className="mt-3 sm:mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-slate-600 text-pretty">
-              From initial concept validation to full-scale global distribution, select the service capability that fits your program's maturity.
+              From idea to fully shipped product, choose the service tier that matches your current stage.
             </p>
           </div>
 
@@ -583,14 +585,10 @@ export default function ServicesClient() {
             {/* Right: quick “at a glance” summary */}
             <div className="lg:sticky lg:top-24 rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-xl shadow-slate-200/50">
               <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-3 sm:mb-4">
-                How we scale with you
+                Structured Engagement Model
               </h3>
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-6 sm:mb-8">
-                Most partners begin with{" "}
-                <span className="font-bold text-slate-900">Rapid NPI</span>, optimize designs via{" "}
-                <span className="font-bold text-slate-900">DFM Engineers</span>, and scale volumes with our{" "}
-                <span className="font-bold text-slate-900">Automated SMT Lines</span> +
-                <span className="font-bold text-slate-900"> System Integration</span>.
+                Our engagement model typically begins with <span className="font-bold text-slate-900">NPI validation</span>, transitions to <span className="font-bold text-slate-900">Design Optimization</span>, and scales seamlessly into <span className="font-bold text-slate-900">Volume Production</span>.
               </p>
 
               <div className="space-y-5 sm:space-y-6 relative">
@@ -602,9 +600,9 @@ export default function ServicesClient() {
                     <span className="text-xs sm:text-sm font-bold">1</span>
                   </div>
                   <div className="pt-1.5 sm:pt-2">
-                    <h4 className="font-bold text-slate-900 text-xs sm:text-sm">Design / EVT</h4>
+                    <h4 className="font-bold text-slate-900 text-xs sm:text-sm">Validation / EVT</h4>
                     <p className="text-xs sm:text-sm text-slate-500 mt-1">
-                      NPI & DFM/DFA Review
+                      Rapid Prototyping + DFM Analysis
                     </p>
                   </div>
                 </div>
@@ -616,7 +614,7 @@ export default function ServicesClient() {
                   <div className="pt-1.5 sm:pt-2">
                     <h4 className="font-bold text-slate-900 text-xs sm:text-sm">DVT / PVT</h4>
                     <p className="text-xs sm:text-sm text-slate-500 mt-1">
-                      Pilot Run & Reliability Testing
+                      PCB Assembly + Testing & QA
                     </p>
                   </div>
                 </div>
@@ -657,14 +655,14 @@ export default function ServicesClient() {
       </section>
 
       {/* SERVICES OVERVIEW (TECHNICAL CARDS) */}
-      <section className="bg-white py-12 md:py-16">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section className="bg-white py-16 sm:py-20 md:py-24">
+        <div className="container max-w-[1600px] px-4 md:px-8 mx-auto">
           <div className="mb-12 md:mb-20 text-center max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-6">
-              Advanced Manufacturing Infrastructure
+              Engineering Excellence
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed">
-              State-of-the-art facility equipped for complex, high-mix builds. We invest in the latest technology to ensure precision at every step.
+              Comprehensive manufacturing solutions designed for scalability, precision, and reliability.
             </p>
           </div>
 
@@ -714,8 +712,8 @@ export default function ServicesClient() {
       </section>
 
       {/* DETAILED SERVICE BREAKDOWN (TABS) */}
-      <section className="tabs-section bg-slate-50 py-12 md:py-16 border-t border-slate-200">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section className="tabs-section bg-slate-50 py-10 sm:py-12 md:py-20 border-t border-slate-200">
+        <div className="container max-w-[1600px] px-4 md:px-8 mx-auto">
           <div className="mb-10 md:mb-16 text-center max-w-3xl mx-auto">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight">
               Detailed Service Breakdown
@@ -824,7 +822,7 @@ export default function ServicesClient() {
 
       {/* OUR CAPABILITIES (CLEAN, STATIC) */}
       <section className="bg-white py-10 sm:py-12 md:py-20">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+        <div className="container max-w-[1600px] px-4 md:px-8 mx-auto">
           <div className="text-center mb-10 md:mb-16 max-w-3xl mx-auto">
             <span className="inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-[11px] sm:text-xs font-bold uppercase tracking-wide text-emerald-700">
               Quality & Compliance
@@ -866,12 +864,13 @@ export default function ServicesClient() {
             {/* Right: summary / reassurance panel */}
             <div className="lg:sticky lg:top-24 rounded-3xl border border-slate-200 bg-slate-900 p-6 sm:p-8 shadow-2xl shadow-slate-900/20 text-slate-100">
               <h3 className="text-lg sm:text-xl font-bold text-white mb-4">
-                Built for Audited, High-Reliability Sectors
+                Built for audited, high-reliability programs
               </h3>
               <p className="text-sm sm:text-base text-slate-300 leading-relaxed mb-6 sm:mb-8">
-                Whether you&apos;re building for <span className="font-bold text-white">Automotive, Medical, or Industrial IoT</span>,
-                our processes are strictly aligned with <span className="font-bold text-white">IPC-A-610 Class 3</span>,{" "}
-                <span className="font-bold text-white">ISO 9001:2015</span>, and traceable quality systems. Cost of failure is not an option.
+                Whether you&apos;re building for automotive, industrial, or IoT,
+                our processes are aligned with <span className="font-bold text-white">IPC-A-610</span>,{" "}
+                <span className="font-bold text-white">RoHS</span>, and ISO-based quality
+                systems. That means fewer surprises in validation and field use.
               </p>
 
               <ul className="space-y-3 sm:space-y-4 text-sm border-t border-slate-800 pt-5 sm:pt-6">
@@ -894,7 +893,7 @@ export default function ServicesClient() {
 
       {/* GRAPH SECTION (DONUT CHART) */}
       <section className="graph-section bg-slate-950 py-14 sm:py-16 md:py-24 overflow-hidden">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+        <div className="container max-w-[1600px] px-4 md:px-8 mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 items-center">
             {/* Text Content */}
             <div className="order-2 lg:order-1">
@@ -1010,7 +1009,7 @@ export default function ServicesClient() {
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/50 to-slate-950 pointer-events-none" />
 
-        <div className="w-full max-w-none relative z-10 px-6 md:px-12 mx-auto text-center">
+        <div className="container max-w-[1600px] relative z-10 px-4 md:px-8 mx-auto text-center">
           <div className="cta-content max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 sm:mb-8 tracking-tight">
               Ready to{" "}

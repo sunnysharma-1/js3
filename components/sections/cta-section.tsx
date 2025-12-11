@@ -45,15 +45,14 @@ export function CTASection() {
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6 leading-tight">
-            From Prototype to <br />
+            Ready to Scale Your <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400">
-              Mass Production
+              Electronic Production?
             </span>
           </h2>
 
           <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Ready to scale? Partner with an EMS provider that values precision as much as you do.
-            Get a detailed quote for your PCB assembly or wire harness project today.
+            Partner with an EMS provider that prioritizes your success. Precision, Quality, and Reliability — delivered on time, every time.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

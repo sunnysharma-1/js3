@@ -34,27 +34,27 @@ const offerings = [
   {
     title: "Surface Mount Technology (SMT)",
     description:
-      "High-speed automated SMT assembly with precision placement for complex boards.",
+      "Precision placement of 01005 passives, CSPs, and Flip Chips using intelligent feeders and traceability logs.",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20Assembly%20Service%201-yNMX76IpPNFKbqaM0Gm8DDcluiwQuI.jpg",
   },
   {
-    title: "Through-Hole Assembly",
+    title: "Through-Hole Technology (THT)",
     description:
-      "Traditional through-hole assembly for components requiring mechanical strength.",
+      "Automated insertion and selective soldering for high-reliability power components and connectors.",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20Assembly%20Service-yywzjFnivLbwthBAkIVKi86etnnzIQ.jpg",
   },
   {
     title: "Mixed Technology Assembly",
     description:
-      "Combining SMT and through-hole techniques for optimal board design.",
+      "Seamless integration of SMT and THT processes on complex multi-layer boards.",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20Assembly%20Service%202-2YYQ5PDb7mMIThMaQssDFdHxQRP1nT.png",
   },
   {
-    title: "BGA and Micro-BGA Assembly",
-    description: "Advanced ball grid array assembly with X-ray inspection.",
+    title: "BGA & µBGA Expertise",
+    description: "Advanced ball grid array assembly with precise temperature profiling and 100% X-ray verification.",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Testing-KDadL2g4iPPdYLLzkn6aSKKGfW8jJP.jpg",
   },
@@ -77,43 +77,43 @@ const offerings = [
 const process = [
   {
     step: "01",
-    title: "Design Review",
-    description: "Comprehensive DFM analysis for manufacturability.",
+    title: "Design for Manufacturing (DFM)",
+    description: "Pre-production analysis to optimize footprint, thermal, and panelization efficiency.",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Global%20Purchasing%202-7FHY3dWqix92oGFzI5wjCrPrlII6i6.jpg",
   },
   {
     step: "02",
-    title: "Material Procurement",
-    description: "Sourcing components from verified global suppliers.",
+    title: "Sourcing & IQC",
+    description: "Component procurement and rigorous Incoming Quality Control verification.",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Global%20Purchasing%201-Ya8hk3l3SlnaasOUk4Vlp7LZiRpDY0.webp",
   },
   {
     step: "03",
-    title: "SMT Assembly",
-    description: "Automated pick-and-place with precise solder paste.",
+    title: "SMT & Reflow",
+    description: "Screen printing, component placement, and N2 reflow soldering.",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20Assembly%20Service%201-yNMX76IpPNFKbqaM0Gm8DDcluiwQuI.jpg",
   },
   {
     step: "04",
-    title: "Reflow Soldering",
-    description: "Controlled profiles for reliable solder joints.",
+    title: "AOI & X-Ray",
+    description: "Automated inspection of solder joints, component presence, and BGA voids.",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20Assembly%20Service-yywzjFnivLbwthBAkIVKi86etnnzIQ.jpg",
   },
   {
     step: "05",
-    title: "Inspection & Testing",
-    description: "AOI, X-ray, and functional testing for QA.",
+    title: "Through-Hole & Wave",
+    description: "Selective soldering or wave soldering for THT components.",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Testing-KDadL2g4iPPdYLLzkn6aSKKGfW8jJP.jpg",
   },
   {
     step: "06",
-    title: "Delivery",
-    description: "Secure packaging and on-time global shipment.",
+    title: "Functional Test & QA",
+    description: "Loading firmware, FCT testing, and final QA prior to packing.",
     image:
       "https://www.pcbinternational.com/images/shippingPCB.jpg",
   },
@@ -123,28 +123,28 @@ const technologies = [
   {
     name: "High-Speed SMT Lines",
     description:
-      "Latest generation pick-and-place machines with 0201 component capability.",
+      "Dual-lane lines capable of 100,000+ CPH, handling 01005 passives and large ICs with ease.",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20Assembly%20Service%202-2YYQ5PDb7mMIThMaQssDFdHxQRP1nT.png",
   },
   {
-    name: "X-Ray Inspection",
+    name: "Advanced X-Ray (AXI)",
     description:
-      "Advanced X-ray systems for BGA and hidden solder joint inspection.",
+      "Non-destructive verification of BGA/QFN solder voiding and wire-bond integrity.",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Testing-KDadL2g4iPPdYLLzkn6aSKKGfW8jJP.jpg",
   },
   {
-    name: "3D AOI Systems",
+    name: "3D AOI & SPI",
     description:
-      "3D automated optical inspection for comprehensive quality control.",
+      "Volumetric inspection of solder paste and placed components to prevent defects at the source.",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20-%20Plant%20Photo-Jz7vz9fkVonxheq1i1YsWivgJON7xV.jpg",
   },
   {
-    name: "Reflow Ovens",
+    name: "Nitrogen Reflow Ovens",
     description:
-      "Precision reflow ovens with nitrogen atmosphere for perfect joints.",
+      "10-zone reflow profiling with N2 atmosphere for superior wetting and joint quality.",
     image:
       "https://www.itechsmt.com/cdn/shop/articles/RF-C835C_800x500_eb0c3a8e-fce7-4e06-8bb6-6f7072dfd9f7.jpg?v=1672896367&width=1000",
   },
@@ -209,7 +209,7 @@ export default function PCBAssemblyPage() {
       {/* HERO – styled like Global Purchasing hero */}
       <section
         ref={heroRef}
-        className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-16 md:py-24"
+        className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-24 md:py-36"
       >
         {/* Background image */}
         <div className="absolute inset-0">
@@ -229,7 +229,7 @@ export default function PCBAssemblyPage() {
           <div className="absolute bottom-0 left-10 h-72 w-72 rounded-full bg-emerald-400/20 blur-3xl" />
         </div>
 
-        <div className="relative z-10 w-full max-w-none px-6 md:px-12">
+        <div className="relative z-10 container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] items-center">
             {/* LEFT – copy + CTAs */}
             <motion.div
@@ -376,7 +376,7 @@ export default function PCBAssemblyPage() {
       </section>
 
       {/* TECHNICAL CAPABILITIES */}
-      <section className="relative bg-white px-6 py-12 md:py-16 overflow-hidden">
+      <section className="relative bg-white px-4 py-16 sm:px-6 md:py-20 lg:px-8 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
@@ -386,7 +386,7 @@ export default function PCBAssemblyPage() {
           </div>
         </div>
 
-        <div className="relative z-10 w-full max-w-none px-6 md:px-12">
+        <div className="relative z-10 mx-auto max-w-screen-2xl">
           <motion.div {...fadeUp()} className="mb-10 text-center md:mb-12">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-600">
               SPECIFICATIONS

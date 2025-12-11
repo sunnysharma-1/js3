@@ -13,62 +13,62 @@ export function ProcessSection() {
       number: 1,
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Global%20Purchasing%201-Ya8hk3l3SlnaasOUk4Vlp7LZiRpDY0.webp",
-      title: "Requirement Analysis",
-      description: "Defining scope & technical specs",
+      title: "Technical Review & Quotation",
+      description: "Scope definition & BOM Analysis",
       details:
-        "We start by reviewing your BOM, Gerber files, and assembly drawings. Our engineering team identifies critical components and potential long-lead items immediately.",
+        "Our engineering team conducts a thorough review of your Bill of Materials (BOM), Gerber files, and assembly drawings to identify critical path items and provide a precise quotation.",
     },
     {
       number: 2,
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20Assembly%20Service%201-yNMX76IpPNFKbqaM0Gm8DDcluiwQuI.jpg",
-      title: "DFM Review",
-      description: "Design for Manufacturing check",
+      title: "DFM/DFA Engineering Analysis",
+      description: "Design for Manufacturing & Assembly",
       details:
-        "Our engineers perform a comprehensive DFM/DFA check to catch footprint errors, component interferences, or thermal issues before the first board is built, saving you costly respin iterations.",
+        "We perform comprehensive DFM/DFA checks to detect footprint errors, component interferences, or thermal risks, ensuring your design is optimized for efficient mass production.",
     },
     {
       number: 3,
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Testing-KDadL2g4iPPdYLLzkn6aSKKGfW8jJP.jpg",
-      title: "Prototyping (NPI)",
-      description: "First article build & validation",
+      title: "Prototype & First Article",
+      description: "NPI & Validation",
       details:
-        "We produce a small pilot batch to validate the process. This allows us to fine-tune the stencil, reflow profile, and pick-and-place programs for mass production consistency.",
+        "We produce a First Article Inspection (FAI) report with every prototype run, allowing for fine-tuning of stencil apertures and reflow profiles before full-scale production.",
     },
     {
       number: 4,
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Global%20Purchasing%202-7FHY3dWqix92oGFzI5wjCrPrlII6i6.jpg",
-      title: "Strategic Sourcing",
-      description: "Procurement & Inventory Mgmt",
+      title: "Supply Chain Execution",
+      description: "Procurement & Inventory Management",
       details:
-        "Our purchasing team sources genuine components from authorized distributors (Digi-Key, Mouser, Arrow) and trusted manufacturers, ensuring full traceability and zero counterfeits.",
+        "Our procurement team sources components exclusively from authorized distributors and trusted manufacturers, ensuring full traceability and zero counterfeit risk.",
     },
     {
       number: 5,
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20-%20Plant%20Photo-Jz7vz9fkVonxheq1i1YsWivgJON7xV.jpg",
-      title: "Mass Production",
-      description: "High-volume automated assembly",
+      title: "Volume Manufacturing",
+      description: "Automated SMT & THT Production",
       details:
-        "Production ramps up on our high-speed LG and Yamaha SMT lines. We utilize 7-zone reflow ovens and automated screen printers for consistent solder joint quality across thousands of units.",
+        "Production scales on our high-speed SMT lines featuring 8-zone reflow ovens and automated screen printing, ensuring consistent solder joint quality across thousands of units.",
     },
     {
       number: 6,
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20Assembly%20Service%202-2YYQ5PDb7mMIThMaQssDFdHxQRP1nT.png",
-      title: "Testing & QA",
+      title: "Comprehensive Verification",
       description: "Functional & Environmental Testing",
       details:
-        "100% visual inspection and AOI checks. We also perform functional testing (FCT), in-circuit testing (ICT), and burn-in testing based on your specific test protocols.",
+        "Beyond 100% visual and AOI checks, we perform In-Circuit Testing (ICT), functional testing (FCT), and burn-in testing tailored to your specific protocols.",
     },
     {
       number: 7,
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Build%20Box-aiyxQtzdWBTgljQYq0nr9qcvSOfmOE.jpg",
-      title: "Final Assembly & Dispatch",
-      description: "Box build & global logistics",
+      title: "Final Integration & Logistics",
+      description: "Box Build & Global Shipping",
       details:
-        "We handle firmware flashing, enclosure assembly, potting, and custom packaging. Finished goods are shipped directly to your warehouse or end-customers with tracking.",
+        "We handle firmware flashing, enclosure assembly, potting, and custom packaging. Finished goods are shipped directly to your destination with full export documentation.",
     },
   ]
 
@@ -85,7 +85,7 @@ export function ProcessSection() {
           <h2 className="text-4xl lg:text-5xl font-semibold text-gray-900 mb-4">
             Our{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0047AB] to-[#06b6d4]">7-Step</span>{" "}
-            EMS Process
+            Quality-Centric Production Lifecycle
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Our streamlined NPI-to-Production workflow ensures quality, compliance, and on-time delivery at every stage.

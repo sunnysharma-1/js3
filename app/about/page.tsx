@@ -129,73 +129,73 @@ export default function AboutPage() {
     return () => ctx.revert()
   }, [])
 
-  // 🔹 Updated to 22 years
+  // 🔹 Updated to 25+ years (Since 1999)
   const yearsCounter = useCounter(25, 2)
   const industriesCounter = useCounter(10, 2)
   const projectsCounter = useCounter(500, 2.5)
 
   const innovatorsData = [
     {
-      name: "Rajesh Sharma",
-      role: "Head of Engineering",
+      name: "Senior Engineering Lead",
+      role: "Chief Technical Officer",
       image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&h=400&fit=crop",
-      heading: "Engineering Solutions, Not Just Circuits",
+      heading: "Engineering Excellence",
       description:
-        "With 20+ years in embedded systems, Rajesh leads our DFM initiative, ensuring every board we build is optimized for yield and reliability before it hits the production line.",
+        "Spearheading our engineering division with a focus on DFM optimization and advanced process capability for high-reliability electronics.",
     },
     {
-      name: "Priya Desai",
-      role: "Quality Assurance Director",
+      name: "Production Head",
+      role: "Head of Manufacturing",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
-      heading: "Zero Defects is a Mindset, Not a Metric",
+      heading: "Quality First",
       description:
-        "Priya oversees our ISO certified QMS. Her rigorous approach to IQC, in-process QC, and final OQC ensures that only flawless products leave our facility.",
+        "Ensuring strict adherence to IPC-A-610 Class 3 standards across all SMT and THT production lines through rigorous process control.",
     },
     {
-      name: "Amit Patel",
-      role: "Production Manager",
+      name: "Operations Director",
+      role: "Operations Manager",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-      heading: "Scalability with Precision",
+      heading: "Precision Logistics",
       description:
-        "Amit manages our high-speed SMT lines. His focus on process capability (Cpk) and lean manufacturing principles allows us to scale from prototypes to mass production seamlessly.",
+        "Managing complex high-mix, low-volume schedules to ensure seamless NPI transitions and on-time delivery for every project.",
     },
   ]
 
   const values = [
     {
       icon: Heart,
-      title: "Client-First Approach",
-      description: "We align our manufacturing schedules with your market demands, acting as a true partner.",
+      title: "Direct Commitment",
+      description: "We prioritize direct access to project managers, ensuring seamless collaboration and rapid response times.",
       gradient: "from-[#0066CC] to-[#00A896]",
     },
     {
       icon: Lightbulb,
-      title: "Continuous Improvement",
-      description: "We optimize production cycles with every batch, reducing costs and lead times.",
+      title: "Statistical Process Control",
+      description: "Data-driven monitoring of reflow profiles and paste deposition ensures consistent quality and repeatability.",
       gradient: "from-[#00A896] to-[#0066CC]",
     },
     {
       icon: Handshake,
-      title: "Reliable Partnerships",
-      description: "Our relationships are built on transparency, on-time delivery, and open communication.",
+      title: "Operational Transparency",
+      description: "Proactive communication regarding project timelines, supply chain status, and production milestones.",
       gradient: "from-[#0066CC] to-[#00A896]",
     },
     {
       icon: Award,
-      title: "Zero Compromise on Quality",
-      description: "IPC Class 3 compliance is not an option; it's our standard operating procedure.",
+      title: "IPC Class 3 Compliance",
+      description: "Standardized to IPC Class 2 with full capability for Class 3 mission-critical assemblies upon request.",
       gradient: "from-[#00A896] to-[#0066CC]",
     },
     {
       icon: Shield,
-      title: "IP Protection",
-      description: "Your designs are your assets. We sign strict NDAs to ensure your IP stays secure.",
+      title: "IP Protection Policy",
+      description: "Strict confidentiality protocols and NDA commitments to protect your design intellectual property.",
       gradient: "from-[#0066CC] to-[#00A896]",
     },
     {
       icon: Users,
-      title: "Skilled Workforce",
-      description: "We invest in training our technicians on the latest SMT and assembly technologies.",
+      title: "Expert Craftsmanship",
+      description: "Certified technicians proficient in fine-pitch hand soldering and complex rework for high-reliability/high-value boards.",
       gradient: "from-[#00A896] to-[#0066CC]",
     },
   ]
@@ -273,21 +273,20 @@ export default function AboutPage() {
 
               <div>
                 <h1 className="text-3xl font-bold md:text-5xl lg:text-6xl text-balance leading-tight mb-6 text-white">
-                  Transforming Ideas into{" "}
+                  Electronics Manufacturing.{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#38bdf8] via-[#22c55e] to-[#a5f3fc]">
-                    Manufacturing Excellence
+                    Engineered for Reliability.
                   </span>
                 </h1>
                 <p className="text-base md:text-lg leading-relaxed text-slate-200 text-pretty mb-6">
-                  For over{" "}
+                  Established in{" "}
                   <span className="font-semibold text-[#38bdf8]">
-                    25+ years
+                    2001
                   </span>
-                  , Jayshree Instruments has been at the forefront of electronics manufacturing, delivering
-                  innovative EMS solutions to startups, corporates, and OEMs worldwide.
+                  , we have dedicated over two decades to perfecting the art of electronics manufacturing. From our origins in through-hole assembly to today's advanced SMT capabilities, our mission remains constant: zero defects.
                 </p>
                 <p className="text-sm md:text-base leading-relaxed text-slate-300 text-pretty">
-                  Jayshree Instruments started in 1999 with a single SMT line. Today, we handle complex, high-mix low-volume and high-volume production for Automotive, Medical, and Industrial sectors.
+                  We specialize in mission-critical builds—complex BGAs, rigid-flex architectures, and high-mix production runs—empowering you to deliver superior products to market.
                 </p>
               </div>
 
@@ -638,13 +637,13 @@ export default function AboutPage() {
               </span>
             </div>
             <h2 className="text-3xl font-bold text-gray-900 md:text-4xl lg:text-5xl leading-tight text-balance mb-6">
-              Driven by Quality,{" "}
+              Built on Integrity,{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0066CC] to-[#00A896]">
-                Defined by Reliability
+                Driven by Precision
               </span>
             </h2>
             <p className="text-base sm:text-lg leading-relaxed text-gray-600 max-w-3xl mx-auto text-pretty">
-              Our core values guide every decision, project, and partnership. They are the foundation of our culture and the promise we make to our clients.
+              Our philosophy is anchored in reality: transparent communication, rigorous process control, and a commitment to quality that extends beyond the certificate on the wall.
             </p>
           </div>
 
@@ -712,8 +711,8 @@ export default function AboutPage() {
               {
                 number: "01",
                 icon: Users,
-                title: "Engineering-First DNA",
-                description: "We don't just assemble; we engineer. Our team provides in-depth DFM feedback to lower your BOM cost and improve yield.",
+                title: "Design for Assembly (DFA) Optimization",
+                description: "Front-end engineering analysis to identify yield risks and optimize efficiency before production begins.",
                 details: "Expertise in complex footprints, rigid-flex boards, and high-reliability interconnects.",
                 gradient: "from-[#0066CC] to-[#00A896]",
                 color: "#0066CC",
@@ -721,17 +720,17 @@ export default function AboutPage() {
               {
                 number: "02",
                 icon: Shield,
-                title: "IP Protection & Trust",
-                description: "We understand the value of your IP. Our facility implements strict physical and digital security protocols.",
-                details: "NDA-driven engagement models ensuring your designs remain confidential.",
+                title: "Secure IP Management",
+                description: "Secure data handling and NDA-governed processes to ensure your intellectual property remains protected.",
+                details: "Strict access controls and secure servers for all design files and firmware.",
                 gradient: "from-[#00A896] to-[#0066CC]",
                 color: "#00A896",
               },
               {
                 number: "03",
                 icon: Award,
-                title: "Certified Manufacturing",
-                description: "Our processes are ISO 9001:2015 certified, ensuring consistent quality management across all builds.",
+                title: "ISO Certified Operations",
+                description: "Fully certified ISO 9001:2015 processes. We live by our quality management system every single day.",
                 gradient: "from-[#0066CC] to-[#00A896]",
                 color: "#0066CC",
                 features: [
@@ -752,8 +751,8 @@ export default function AboutPage() {
               {
                 number: "04",
                 icon: Target,
-                title: "End-to-End Testing",
-                description: "We catch defects before they ship. From ICT to Functional Test, we ensure 100% functionality.",
+                title: "Comprehensive Testing",
+                description: "We validate performance before shipment. From Flying Probe to functional jigs, we ensure 100% functionality.",
                 gradient: "from-[#00A896] to-[#0066CC]",
                 color: "#00A896",
                 sections: [
@@ -770,17 +769,17 @@ export default function AboutPage() {
               {
                 number: "05",
                 icon: Zap,
-                title: "Flexible Scalability",
-                description: "Whether you need 10 prototypes or 10,000 production units, our flexible lines adapt to your volume needs.",
-                details: "Seamless NPI to Mass Production transition without switching vendors.",
+                title: "Scalable Manufacturing",
+                description: "Agile lines adaptable to both prototype and volume requirements. Seamless scaling without changing partners.",
+                details: "Seamless NPI to Mass Production transition managed by dedicated project teams.",
                 gradient: "from-[#0066CC] to-[#00A896]",
                 color: "#0066CC",
               },
               {
                 number: "06",
                 icon: Globe,
-                title: "Strategic Sourcing",
-                description: "Direct relationships with global distributors and manufacturers ensure authentic parts and better pricing.",
+                title: "Strategic Supply Chain",
+                description: "Vetted global network ensuring component authenticity and availability. We manage the logistics so you don't have to.",
                 details: "Proactive obsolescence management and alternative part suggestions.",
                 gradient: "from-[#00A896] to-[#0066CC]",
                 color: "#00A896",

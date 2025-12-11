@@ -60,9 +60,9 @@ function ContactForm() {
     >
       <Card className="shadow-md">
         <CardContent className="p-6 md:p-8">
-          <h2 className="mb-2 text-2xl font-bold md:text-3xl">Send Us a Message</h2>
+          <h2 className="mb-2 text-2xl font-bold md:text-3xl">Request a Quote</h2>
           <p className="mb-6 text-sm text-muted-foreground">
-            Share your details and requirements, and our team will get back to you with the next steps.
+            Share your project details, handling requirements, or technical queries. Our engineering team reviews every request.
           </p>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div className="grid gap-4 md:grid-cols-2">
@@ -132,12 +132,14 @@ function ContactForm() {
                 {...register("service")}
                 className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
-                <option value="">Select a service</option>
-                <option value="pcb">PCB Assembly</option>
-                <option value="prototyping">Prototyping</option>
-                <option value="wire-harness">Wire Harness &amp; Box Build</option>
-                <option value="design">Design Engineering</option>
-                <option value="other">Other</option>
+                <option value="">Select a service category</option>
+                <option value="pcb">PCB Assembly (SMT/THT)</option>
+                <option value="box-build">Turnkey Box Build</option>
+                <option value="wire-harness">Wire Harness & Cabling</option>
+                <option value="prototyping">Rapid Prototyping</option>
+                <option value="design">Design & Engineering</option>
+                <option value="purchasing">Global Sourcing</option>
+                <option value="other">Other / General Inquiry</option>
               </select>
             </div>
 
@@ -146,7 +148,7 @@ function ContactForm() {
               <Label htmlFor="file">Upload File (Optional)</Label>
               <Input id="file" type="file" />
               <p className="text-xs text-muted-foreground">
-                You can attach BOM, Gerber files, drawings, or project documents.
+                Securely upload BOMs, Gerbers, or NDA documents.
               </p>
             </div>
 
@@ -332,8 +334,7 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="text-pretty text-base text-white/90 md:text-lg">
-              Have a project in mind? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon
-              as possible.
+              Have a project in mind? Partner with Jayshree Instruments. We provide industrial-grade manufacturing solutions with a focus on quality and reliability.
             </p>
           </motion.div>
         </div>

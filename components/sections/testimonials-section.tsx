@@ -7,26 +7,26 @@ import { Star, Quote } from 'lucide-react'
 const testimonials = [
   {
     id: 1,
-    name: "Ravi Patel",
-    company: "Automotive Systems India",
-    text: "Jayshree Instruments handled our EV charger prototype with incredible speed. The DFM feedback they provided saved us weeks of redesign time.",
-    role: "Lead Engineer",
+    name: "Engineering Director",
+    company: "Leading EV Manufacturer",
+    text: "Jayshree's DFM analysis identified a critical thermal issue in our BMS design before production. Their foresight saved us months of development time and costly respins.",
+    role: "Automotive Client",
     rating: 5,
   },
   {
     id: 2,
-    name: "Dr. Anjali Gupta",
-    company: "MedTech Innovations",
-    text: "For medical devices, quality is non-negotiable. Their ISO 13485 compliant process gave us full confidence in the safety and reliability of our patient monitors.",
-    role: "Founder",
+    name: "Operations Head",
+    company: "Medical Device OEM",
+    text: "We achieved ISO 13485 compliance seamlessly thanks to their meticulous traceability and documentation standards. A partner that truly understands regulatory requirements.",
+    role: "MedTech Client",
     rating: 5,
   },
   {
     id: 3,
-    name: "Vikram Singh",
-    company: "Industrial Controls solutions",
-    text: "We scaled from 50 boards to 5,000 units/month without a hitch. Their supply chain team managed component shortages proactively, keeping our line running.",
-    role: "Operations Manager",
+    name: "Supply Chain Manager",
+    company: "Industrial Automation Leader",
+    text: "Facing a global component shortage, their sourcing team found verified alternatives and validated them within 48 hours, keeping our assembly lines running without interruption.",
+    role: "Industrial Client",
     rating: 5,
   },
 ]
@@ -76,7 +76,7 @@ export function TestimonialsSection() {
             Trusted by Industry Leaders
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Partners throughout the industry rely on us to keep their production lines moving.
+            From startups to multinationals, companies rely on Jayshree Instruments for their most critical manufacturing needs.
           </p>
         </motion.div>
 

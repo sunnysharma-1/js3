@@ -11,6 +11,9 @@ import {
   CheckCircle,
   Award,
   Sparkles,
+  Cpu,
+  Layers,
+  FileCode,
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -39,39 +42,34 @@ export default function DesignEngineeringPage() {
 
   const offerings = [
     {
-      title: "Circuit Design and Layout",
-      description: "Expert PCB design and layout services optimized for performance and manufacturability.",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20Assembly%20Service%201-yNMX76IpPNFKbqaM0Gm8DDcluiwQuI.jpg",
+      title: "Schematic & PCB Layout",
+      description: "High-speed digital, mixed-signal, and power electronics design using Altium Designer and KiCad.",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20Assembly%20Service%201-yNMX76IpPNFKbqaM0Gm8DDcluiwQuI.jpg",
     },
     {
-      title: "Design for Manufacturing (DFM)",
-      description: "Comprehensive DFM analysis to reduce costs and improve production efficiency.",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20Assembly%20Service%202-2YYQ5PDb7mMIThMaQssDFdHxQRP1nT.png",
+      title: "Embedded Firmware",
+      description: "Bare-metal C/C++ and RTOS development for STM32, ESP32, Nordic, and TI microcontrollers.",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Testing-KDadL2g4iPPdYLLzkn6aSKKGfW8jJP.jpg",
     },
     {
-      title: "Design for Test (DFT)",
-      description: "Testability analysis and optimization for easier quality control.",
+      title: "DFM & DFA Analysis",
+      description: "Proactive pre-production review to optimize panelization, reduce BOM cost, and improve yield.",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20Assembly%20Service%202-2YYQ5PDb7mMIThMaQssDFdHxQRP1nT.png",
+    },
+    {
+      title: "Mechanical Design",
+      description: "Industrial enclosure design (IP-rated), thermal simulation, and 3D printing validation.",
+      image: "https://vectorbluehub.com/zdjecia/artykul/80/559/1920x1080/4/Box-Build__90_.JPG",
+    },
+    {
+      title: "Reverse Engineering",
+      description: "Legacy system modernization, BOM obsolescence recovery, and schematic recreation from physical boards.",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20-%20Plant%20Photo-Jz7vz9fkVonxheq1i1YsWivgJON7xV.jpg",
+    },
+    {
+      title: "Prototyping & Bring-Up",
+      description: "Rapid V1 build, board bring-up, signal integrity measurement, and functional validation.",
       image: "https://blog.milwaukeeelectronics.com/wp-content/uploads/2015/04/DFT-Engineers2.jpg",
-    },
-    {
-      title: "Component Selection",
-      description: "Strategic component selection balancing performance, cost, and availability.",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Global%20Purchasing%202-7FHY3dWqix92oGFzI5wjCrPrlII6i6.jpg",
-    },
-    {
-      title: "Cost Optimization",
-      description: "Value engineering to reduce costs without compromising quality.",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20-%20Plant%20Photo-Jz7vz9fkVonxheq1i1YsWivgJON7xV.jpg",
-    },
-    {
-      title: "Technical Documentation",
-      description: "Complete technical documentation including schematics, BOMs, and assembly drawings.",
-      image:
-        "https://evatronix.com/images/en/offer/printed-circuits-board/pcb-assembly/xEvatronix_Required_documentation_02_800x450.jpg.pagespeed.ic.Yr7FuW-wG9.jpg",
     },
   ]
 
@@ -80,7 +78,7 @@ export default function DesignEngineeringPage() {
       {/* HERO – styled like Global Purchasing page */}
       <section
         ref={heroRef}
-        className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-12 md:py-16"
+        className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-24 md:py-36"
       >
         {/* Background image + overlay */}
         <div className="absolute inset-0">
@@ -99,7 +97,7 @@ export default function DesignEngineeringPage() {
           <div className="absolute bottom-0 left-10 h-72 w-72 rounded-full bg-emerald-400/15 blur-3xl" />
         </div>
 
-        <div className="relative z-10 w-full max-w-none px-6 md:px-12 mx-auto">
+        <div className="relative z-10 container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] items-center">
             {/* Left content */}
             <motion.div
@@ -110,45 +108,38 @@ export default function DesignEngineeringPage() {
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-teal-400/40 bg-slate-900/60 px-4 py-2 backdrop-blur">
                 <Wrench className="h-4 w-4 text-teal-300" />
                 <span className="text-xs font-medium uppercase tracking-[0.18em] text-teal-100">
-                  Design Engineering &amp; DFM / DFT
+                  Concept to Production
                 </span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight mb-5 text-balance">
-                Make your designs{" "}
+                Design for{" "}
                 <span className="bg-gradient-to-r from-teal-300 via-emerald-300 to-cyan-300 bg-clip-text text-transparent">
-                  build-ready
-                </span>{" "}
-                from day one.
+                  Manufacturing Excellence
+                </span>
               </h1>
 
               <p className="text-base md:text-lg text-slate-200/90 mb-8 max-w-2xl leading-relaxed">
-                We bridge the gap between schematic, layout, and manufacturing. From DFM/DFT reviews to component
-                strategy and PCB layout optimisation, our team helps your first build behave like revision three.
+                We believe the best manufacturing starts at the design stage. Our engineering team helps you migrate from
+                breadboard to industrial-grade PCB, optimise BOMs for cost and availability, and write the firmware that brings it to life.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-10">
                 <Link href="/contact">
                   <Button className="bg-teal-500 hover:bg-teal-400 text-slate-950 font-semibold px-7 py-5 text-base shadow-lg shadow-teal-500/30">
-                    Request a Design Review
+                    Request Design Review
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                {/* <Button
-                  variant="outline"
-                  className="border-slate-500/70 bg-slate-900/40 text-slate-50 hover:bg-slate-800/80 hover:text-white"
-                >
-                  Download Capabilities Deck
-                </Button> */}
               </div>
 
               {/* Stats – styled like Global Purchasing hero */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {[
-                  { label: "Years in Design", value: "20+", icon: Award },
-                  { label: "Designs Optimised", value: "300+", icon: Zap },
-                  { label: "Avg. Response Time", value: "< 48h", icon: CheckCircle },
-                  { label: "Application Domains", value: "10+", icon: Lightbulb },
+                  { label: "Design Engineers", value: "15+", icon: Award },
+                  { label: "Successful Designs", value: "500+", icon: Zap },
+                  { label: "Board Layers", value: "Up to 32", icon: Layers },
+                  { label: "First Pass Yield", value: "> 95%", icon: CheckCircle },
                 ].map((stat, i) => {
                   const Icon = stat.icon
                   return (
@@ -200,18 +191,18 @@ export default function DesignEngineeringPage() {
                 <div className="rounded-2xl border border-slate-700/80 bg-slate-950/80 p-4 text-xs text-slate-200 flex items-start gap-3">
                   <Sparkles className="h-5 w-5 text-emerald-400 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-sm mb-1">DFM / DFT Integrated</div>
+                    <div className="font-semibold text-sm mb-1">DFM First Approach</div>
                     <p className="text-slate-400 text-[11px] leading-snug">
-                      Design decisions aligned with real manufacturing and test constraints from day one.
+                      We design boards that are easy to build, test, and scale.
                     </p>
                   </div>
                 </div>
                 <div className="rounded-2xl border border-slate-700/80 bg-slate-950/80 p-4 text-xs text-slate-200 flex items-start gap-3">
                   <TrendingUp className="h-5 w-5 text-teal-300 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-sm mb-1">BOM & Component Strategy</div>
+                    <div className="font-semibold text-sm mb-1">Obsolescence Proofing</div>
                     <p className="text-slate-400 text-[11px] leading-snug">
-                      Cost, lifecycle, and availability optimised for stable long-term production.
+                      Active component lifecycle management during design phase.
                     </p>
                   </div>
                 </div>
@@ -222,8 +213,8 @@ export default function DesignEngineeringPage() {
       </section>
 
       {/* What We Do */}
-      <section className="py-12 md:py-16">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -240,21 +231,20 @@ export default function DesignEngineeringPage() {
                 What We Do
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6 text-base">
-                Our design engineering services bridge the gap between concept and production. We work alongside your
-                team to optimise schematics, layouts and BOMs so your products flow smoothly into manufacturing.
+                We are not just a design house; we are a manufacturing company that designs. This means every trace layout, every component selection, and every mechanical tolerance
+                is chosen with the factory floor in mind.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6 text-base">
-                With deep experience in circuit design, PCB layout and DFM/DFT analysis, we help you avoid costly
-                redesigns, late-stage changes and unexpected line stops.
+                Our collaborative process ensures that by the time you reach the prototype stage, the hard work of ensuring manufacturability is already done.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-5 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                  <div className="text-3xl font-bold text-[#0066CC] mb-1">20+</div>
-                  <div className="text-sm text-gray-600 font-medium">Years Experience</div>
+                  <div className="text-xl font-bold text-[#0066CC] mb-1">Full Stack</div>
+                  <div className="text-sm text-gray-600 font-medium">Hardware & Firmware</div>
                 </div>
                 <div className="p-5 bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                  <div className="text-3xl font-bold text-[#00A896] mb-1">300+</div>
-                  <div className="text-sm text-gray-600 font-medium">Designs Optimized</div>
+                  <div className="text-xl font-bold text-[#00A896] mb-1">Altium</div>
+                  <div className="text-sm text-gray-600 font-medium">Preferred Tool</div>
                 </div>
               </div>
             </motion.div>
@@ -278,15 +268,15 @@ export default function DesignEngineeringPage() {
       </section>
 
       {/* Design Optimization Process */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 to-slate-800 text-white px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4">Our Design Optimization Process</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4">Engineering Workflow</h2>
             <p className="text-gray-300 max-w-2xl mx-auto text-pretty">
               A structured approach to convert early concepts into stable, production-ready designs.
             </p>
@@ -296,39 +286,39 @@ export default function DesignEngineeringPage() {
             {[
               {
                 step: "01",
-                title: "Design Analysis",
-                description: "Comprehensive review of schematics, layouts and performance requirements.",
+                title: "Requirements Capture",
+                description: "Defining technical specs, environmental constraints, and target BOM cost.",
                 icon: Lightbulb,
               },
               {
                 step: "02",
-                title: "DFM Optimization",
-                description: "Identify manufacturing risks and optimise for assembly and test.",
-                icon: Zap,
+                title: "Schematic Capture",
+                description: "Component selection and logical circuit design using Altium or KiCad.",
+                icon: Cpu,
               },
               {
                 step: "03",
-                title: "Cost Reduction",
-                description: "Value engineering to reduce BOM and process costs.",
-                icon: TrendingUp,
+                title: "PCB Layout",
+                description: "Placement, routing, and stackup design with signal integrity in mind.",
+                icon: Layers,
               },
               {
                 step: "04",
-                title: "Component Strategy",
-                description: "Component selection based on availability, lifecycle and performance.",
-                icon: CheckCircle,
+                title: "DFM & Simulation",
+                description: "3D interference checks and manufacturing rule compliance verification.",
+                icon: Sparkles,
               },
               {
                 step: "05",
-                title: "Design Validation",
-                description: "Simulation, prototyping and validation for reliability and performance.",
+                title: "Prototyping",
+                description: "Rapid build of first-article units for functional validation.",
                 icon: Wrench,
               },
               {
                 step: "06",
-                title: "Release & Docs",
-                description: "Complete documentation package ready for manufacturing handoff.",
-                icon: ArrowRight,
+                title: "ToT & Handoff",
+                description: "Full Transfer of Technology including Gerbers, BOM, and Source Code.",
+                icon: FileCode,
               },
             ].map((item, index) => {
               const IconComponent = item.icon
@@ -357,8 +347,8 @@ export default function DesignEngineeringPage() {
       </section>
 
       {/* Engineering Expertise */}
-      <section className="py-12 md:py-16">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <motion.div
               className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-200"
@@ -383,26 +373,25 @@ export default function DesignEngineeringPage() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-50 rounded-full mb-6">
                 <Lightbulb className="h-5 w-5 text-teal-600" />
-                <span className="text-sm font-medium text-teal-600">Engineering Expertise</span>
+                <span className="text-sm font-medium text-teal-600">Technical Competencies</span>
               </div>
 
               <h2 className="text-3xl md:text-4xl font-semibold mb-6 bg-gradient-to-r from-[#0066CC] to-[#00A896] bg-clip-text text-transparent">
-                Specialized Engineering Capabilities
+                Tools & Technologies
               </h2>
 
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Our team brings decades of experience across electronics design, manufacturing and optimisation. We
-                leverage industry-standard tools and proven methodologies to deliver reliable, scalable outcomes.
+                We use industry-standard tools to ensure your design files are compatible, maintainable, and professional.
               </p>
 
               <div className="space-y-4">
                 {[
-                  "Advanced PCB design & layout (Altium, Cadence, KiCad)",
-                  "Signal integrity and power integrity analysis",
-                  "Thermal management and long-term reliability analysis",
-                  "EMC/EMI compliance & pre-compliance support",
-                  "Firmware and software integration support",
-                  "Supply chain and component lifecycle strategy",
+                  "PCB Design: Altium Designer, KiCad, Cadence",
+                  "Mechanical: SolidWorks, AutoCAD",
+                  "Firmware: ST CubeIDE, ESP-IDF, Keil",
+                  "Simulation: LTSpice, HyperLynx",
+                  "Analogue & Power Management Design",
+                  "RF & Wireless Connectivity (BLE, Wi-Fi, LoRa)",
                 ].map((capability, index) => (
                   <motion.div
                     key={capability}
@@ -423,11 +412,11 @@ export default function DesignEngineeringPage() {
       </section>
 
       {/* What We Offer */}
-      <section className="py-12 md:py-16 bg-gradient-to-b from-slate-50 to-white">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4 bg-gradient-to-r from-[#0066CC] to-[#00A896] bg-clip-text text-transparent">
-              What We Offer
+              Design Services
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-pretty text-base">
               End-to-end design engineering services to make your products manufacturing-ready.
@@ -464,8 +453,8 @@ export default function DesignEngineeringPage() {
       </section>
 
       {/* Get Started CTA */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-[#0066CC] via-[#007FAF] to-[#00A896] text-white">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+      <section className="py-16 md:py-20 bg-gradient-to-br from-[#0066CC] via-[#007FAF] to-[#00A896] text-white px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-6xl mx-auto">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1.7fr)_minmax(0,1.1fr)] items-center">
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/30 text-xs font-medium mb-4">

@@ -339,7 +339,7 @@ export default function PrototypingSupportClient() {
         />
 
         {/* Hero Content */}
-        <motion.div style={{ opacity: heroOpacity, scale: heroScale }} className="w-full max-w-none px-6 md:px-12 relative z-10 py-12 md:py-16">
+        <motion.div style={{ opacity: heroOpacity, scale: heroScale }} className="container relative z-10 py-20">
           <div className="max-w-4xl">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -446,11 +446,11 @@ export default function PrototypingSupportClient() {
       </section>
 
       {/* WHO WE SUPPORT */}
-      <section className="py-12 md:py-16 bg-white relative overflow-hidden">
+      <section className="py-24 md:py-32 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.05),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.05),transparent_50%)]" />
 
-        <div className="w-full max-w-none px-6 md:px-12 relative z-10">
+        <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -481,8 +481,9 @@ export default function PrototypingSupportClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
-                className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                  } gap-12 items-center`}
+                className={`flex flex-col ${
+                  index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                } gap-12 items-center`}
               >
                 {/* Image side */}
                 <div className="flex-1 relative">
@@ -555,11 +556,11 @@ export default function PrototypingSupportClient() {
       </section>
 
       {/* WHAT WE OFFER */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-blue-50 via-white to-cyan-50 relative overflow-hidden">
+      <section className="py-24 md:py-32 bg-gradient-to-br from-blue-50 via-white to-cyan-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]" />
 
-        <div className="w-full max-w-none px-6 md:px-12 relative z-10">
+        <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -639,7 +640,7 @@ export default function PrototypingSupportClient() {
       </section>
 
       {/* PROCESS TIMELINE */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-cyan-50 via-blue-50 to-teal-50 relative overflow-hidden">
+      <section className="py-24 md:py-32 bg-gradient-to-br from-cyan-50 via-blue-50 to-teal-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#e0f2fe_1px,transparent_1px),linear-gradient(to_bottom,#e0f2fe_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-40" />
 
         <motion.div
@@ -648,7 +649,7 @@ export default function PrototypingSupportClient() {
           transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
         />
 
-        <div className="w-full max-w-none px-6 md:px-12 relative z-10 text-center">
+        <div className="container relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <Sparkles className="h-16 w-16 mx-auto mb-6 text-cyan-600" />
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance text-slate-900">
@@ -721,8 +722,8 @@ export default function PrototypingSupportClient() {
       </section>
 
       {/* PACKAGES / PRICING */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="w-full max-w-none px-6 md:px-12">
+      <section className="py-24 md:py-32 bg-white">
+        <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -755,8 +756,9 @@ export default function PrototypingSupportClient() {
                 transition={{ delay: index * 0.1 }}
               >
                 <Card
-                  className={`h-full relative overflow-hidden border-2 ${pkg.popular ? "border-emerald-500 shadow-2xl" : "border-slate-200"
-                    } bg-white`}
+                  className={`h-full relative overflow-hidden border-2 ${
+                    pkg.popular ? "border-emerald-500 shadow-2xl" : "border-slate-200"
+                  } bg-white`}
                 >
                   {pkg.popular && (
                     <div className="absolute top-3 right-3 rounded-full bg-emerald-500 px-3 py-1 text-xs font-semibold text-white shadow-md">
@@ -794,8 +796,8 @@ export default function PrototypingSupportClient() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-12 md:py-16 bg-slate-50 relative overflow-hidden">
-        <div className="w-full max-w-none px-6 md:px-12 relative z-10">
+      <section className="py-24 md:py-32 bg-slate-50 relative overflow-hidden">
+        <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -865,7 +867,7 @@ export default function PrototypingSupportClient() {
 
       {/* FAQ */}
       <section className="py-24 md:py-32 bg-white">
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto">
+        <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -922,7 +924,7 @@ export default function PrototypingSupportClient() {
           transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
         />
 
-        <div className="w-full max-w-none px-6 md:px-12 mx-auto relative z-10">
+        <div className="container relative z-10 max-w-6xl mx-auto">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] items-center">
             {/* Left: messaging */}
             <div>

@@ -11,7 +11,7 @@ export function ServicesSection() {
       key: "pcb",
       title: "PCB Assembly (PCBA)",
       description:
-        "High-precision SMT & THT assembly. We handle complex components including fine-pitch BGAs and QFNs with automated optical inspection (AOI) to ensure zero defects.",
+        "Surface Mount (SMT) & Through-Hole (THT) assembly. Capability for 01005 passives, fine-pitch BGAs, QFNs, and PoP technology with 100% AOI coverage.",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20Assembly%20Service%202-pfFT58scAf392uAYx98LXppMxjZnMW.png",
       span: "lg:row-span-2 lg:col-span-1",
@@ -20,7 +20,7 @@ export function ServicesSection() {
       key: "design",
       title: "Design for Manufacturing",
       description:
-        "We don't just build; we optimize. Our engineers review your Gerbers and BOMs to identify cost-saving opportunities and manufacturability improvements before production begins.",
+        "In-depth DFM/DFA analysis to optimize yield, ensure manufacturability, and reduce BOM costs before the first prototype is built.",
       image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
       span: "lg:col-span-2",
     },
@@ -28,7 +28,7 @@ export function ServicesSection() {
       key: "testing",
       title: "Functional Testing",
       description:
-        "Rigorous verification using custom fixtures, flying probes, and functional test setups. We ensure your board works exactly as intended in the real world.",
+        "Custom test fixture development, In-Circuit Testing (ICT), Flying Probe, and full functional verification to ensure zero-defect shipments.",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PCB%20Testing%201-0jbz8kQVkrc9xoGfCI8B2XpnQ09Vc4.jpg",
       span: "lg:col-span-1",
@@ -37,7 +37,7 @@ export function ServicesSection() {
       key: "sourcing",
       title: "Strategic Component Sourcing",
       description:
-        "Leverage our established vendor network to source authentic components at the best prices. We proactively manage obsolescence and lead times to keep your production on schedule.",
+        "Global supply chain management with vetted distributors. We handle obsolescence management and ensure full component traceability.",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Global%20Purchasing%201-2DfrGR74bngePYWCEn40HTe7dTjgFV.webp",
       span: "lg:col-span-2",
@@ -46,7 +46,7 @@ export function ServicesSection() {
       key: "wire-harness",
       title: "Wire Harnessing",
       description:
-        "Custom cable assemblies cut, crimped, and labeled to your specifications. Ideal for automotive, industrial, and consumer applications requiring organized connectivity.",
+        "Automated cutting, stripping, and crimping for complex wire harnesses and industrial cable assemblies.",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Harness-DcMFYx4fME7FgHmKZz7zIIJVyVD8hO.avif",
       span: "lg:col-span-1",
     },
@@ -68,9 +68,9 @@ export function ServicesSection() {
     <section className="py-12 lg:py-16 bg-white">
       <div className="w-full max-w-none px-6 md:px-12">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-[#0066CC]">Core Manufacturing Capabilities</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-[#0066CC]">Comprehensive EMS Capabilities</h2>
           <p className="text-lg text-gray-700 max-w-4xl mx-auto">
-            From single-board prototypes to complex electromechanical box builds—we ensure every unit leaving our facility meets your exact specifications.
+            Specializing in High-Mix, Low-Volume to Medium-Volume production with IPC Class 3 quality standards.
           </p>
         </div>
 
