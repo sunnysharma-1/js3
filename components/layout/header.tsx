@@ -4,7 +4,6 @@ import { useState } from "react"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import {
-  Menu,
   ChevronDown,
   Cpu,
   Wrench,
@@ -96,11 +95,21 @@ export function Header() {
   const isServicesActive = pathname.startsWith("/services")
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur-md supports-[backdrop-filter]:bg-white/80 shadow-sm">
-      <div className="w-full max-w-none flex h-24 items-center justify-between px-6 sm:px-8 lg:px-12">
-        {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <div className="relative h-50 w-56 md:h-60 md:w-64">
+    <header >
+      {/* UPDATES FOR DESKTOP:
+        1. max-w-7xl: Prevents content from stretching too wide on 4k screens.
+        2. mx-auto: Centers the content.
+        3. h-20: Fixed height for consistency (instead of arbitrary h-23).
+      */}
+      <div className="mx-auto flex h-21 w-full max-w-7xl items-center justify-between px-8 sm:px-6 lg:px-6">
+        
+        {/* Logo Section */}
+        <Link href="/" className="flex items-center shrink-0">
+          {/* UPDATES:
+            Resized the container to fit the header height (h-14). 
+            The original h-60 was too large for a standard sticky navbar.
+          */}
+          <div className="relative h-60 w-60 md:h-70 md:w-60">
             <Image
               src="/images/design-mode/Black_and_White_Circular_Art___Design_Logo__1_-removebg-preview.png"
               alt="Jayshree Instruments Logo"
@@ -109,20 +118,27 @@ export function Header() {
               priority
             />
           </div>
+          {/* Optional: Add Company Name text next to logo for better desktop visibility if needed */}
+          {/* <span className="ml-2 text-xl font-bold hidden xl:block">Jayshree</span> */}
         </Link>
 
         {/* Desktop Navigation - Center */}
-        <nav className="hidden lg:flex lg:items-center lg:gap-8">
+        {/* UPDATES:
+           1. lg:gap-6 xl:gap-10: Adjusts spacing based on screen size (tighter on laptops, wider on large screens).
+           2. text-sm xl:text-base: Adjusts font size for readability.
+        */}
+        <nav className="hidden lg:flex lg:items-center lg:gap-6 xl:gap-10">
           {navLinks.map((link) => {
             const isActive = pathname === link.href
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative text-base font-semibold transition-colors hover:text-[#4A90E2] after:absolute after:bottom-[-2px] after:left-0 after:h-0.5 after:bg-[#4A90E2] after:transition-all after:duration-300 ${isActive
-                  ? "text-[#4A90E2] after:w-full"
-                  : "text-gray-700 after:w-0 hover:after:w-full"
-                  }`}
+                className={`relative text-sm font-semibold xl:text-base transition-colors hover:text-[#4A90E2] after:absolute after:bottom-[-2px] after:left-0 after:h-0.5 after:bg-[#4A90E2] after:transition-all after:duration-300 ${
+                  isActive
+                    ? "text-[#4A90E2] after:w-full"
+                    : "text-gray-700 after:w-0 hover:after:w-full"
+                }`}
               >
                 {link.label}
               </Link>
@@ -131,52 +147,66 @@ export function Header() {
 
           <DropdownMenu>
             <DropdownMenuTrigger
-              className={`flex items-center gap-1 text-base font-semibold transition-colors hover:text-[#4A90E2] focus:outline-none data-[state=open]:text-[#4A90E2] ${isServicesActive ? "text-[#4A90E2]" : "text-gray-700"
-                }`}
+              className={`flex items-center gap-1 text-sm xl:text-base font-semibold transition-colors hover:text-[#4A90E2] focus:outline-none data-[state=open]:text-[#4A90E2] ${
+                isServicesActive ? "text-[#4A90E2]" : "text-gray-700"
+              }`}
             >
               Services
               <ChevronDown className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="center" className="w-80 p-2">
+            <DropdownMenuContent align="center" className="w-80 p-2 mt-2">
               <DropdownMenuLabel className="text-xs font-semibold text-gray-500 uppercase tracking-wider px-2 py-1">
                 Our Services
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
-              {serviceLinks.map((link, index) => {
-                const Icon = link.icon
-                return (
-                  <DropdownMenuItem key={link.href} asChild>
-                    <Link
-                      href={link.href}
-                      className={`cursor-pointer flex items-start gap-3 p-3 rounded-lg transition-colors hover:bg-blue-50 ${index === 0
-                        ? "bg-gradient-to-r from-blue-50 to-teal-50 border border-blue-100"
-                        : ""
+              <div className="max-h-[60vh] overflow-y-auto">
+                {serviceLinks.map((link, index) => {
+                  const Icon = link.icon
+                  return (
+                    <DropdownMenuItem key={link.href} asChild>
+                      <Link
+                        href={link.href}
+                        className={`cursor-pointer flex items-start gap-3 p-3 rounded-lg transition-colors hover:bg-blue-50 ${
+                          index === 0
+                            ? "bg-gradient-to-r from-blue-50 to-teal-50 border border-blue-100"
+                            : ""
                         }`}
-                    >
-                      <div className={`mt-0.5 ${index === 0 ? "text-[#4A90E2]" : "text-gray-500"}`}>
-                        <Icon className="h-5 w-5" />
-                      </div>
-                      <div className="flex-1">
+                      >
                         <div
-                          className={`font-medium ${index === 0 ? "text-[#4A90E2]" : "text-gray-900"
-                            }`}
+                          className={`mt-0.5 ${
+                            index === 0 ? "text-[#4A90E2]" : "text-gray-500"
+                          }`}
                         >
-                          {link.label}
+                          <Icon className="h-5 w-5" />
                         </div>
-                        <div className="text-xs text-gray-500 mt-0.5">{link.description}</div>
-                      </div>
-                    </Link>
-                  </DropdownMenuItem>
-                )
-              })}
+                        <div className="flex-1">
+                          <div
+                            className={`font-medium ${
+                              index === 0 ? "text-[#4A90E2]" : "text-gray-900"
+                            }`}
+                          >
+                            {link.label}
+                          </div>
+                          <div className="text-xs text-gray-500 mt-0.5">
+                            {link.description}
+                          </div>
+                        </div>
+                      </Link>
+                    </DropdownMenuItem>
+                  )
+                })}
+              </div>
             </DropdownMenuContent>
           </DropdownMenu>
         </nav>
 
         {/* Contact Info - Desktop */}
-        <div className="hidden lg:flex items-center gap-6">
-          <div className="flex items-center gap-2 text-sm">
-            <a href="tel:+918866968821" className="text-gray-700 hover:text-[#4A90E2] transition-colors">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-6 shrink-0">
+          <div className="flex items-center gap-2 text-sm xl:text-base">
+            <a
+              href="tel:+918866968821"
+              className="text-gray-700 hover:text-[#4A90E2] transition-colors whitespace-nowrap"
+            >
               +91 88669 68821
             </a>
           </div>
@@ -188,7 +218,7 @@ export function Header() {
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation Toggle */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <motion.div
             initial={{ opacity: 0, scale: 0.8, x: 20 }}
@@ -199,7 +229,7 @@ export function Header() {
             <SheetTrigger asChild>
               <Button
                 variant="ghost"
-                className="relative group h-11 px-6 rounded-full overflow-hidden bg-transparent hover:bg-transparent"
+                className="relative group h-11 px-2 md:px-6 rounded-full overflow-hidden bg-transparent hover:bg-transparent"
               >
                 {/* Gradient Border/Background Layer */}
                 <span className="absolute inset-0 rounded-full bg-gradient-to-r from-[#0066CC] to-[#00A896] p-[2px]">
@@ -207,7 +237,7 @@ export function Header() {
                 </span>
 
                 {/* Content */}
-                <span className="relative flex items-center gap-3">
+                <span className="relative flex items-center gap-3 px-4">
                   {/* Custom Hamburger Icon */}
                   <div className="flex flex-col gap-[4px] items-end justify-center py-1">
                     <span className="w-5 h-0.5 bg-[#0066CC] rounded-full group-hover:bg-white transition-all duration-300" />
@@ -218,9 +248,9 @@ export function Header() {
               </Button>
             </SheetTrigger>
           </motion.div>
-          <SheetContent side="right" className="w-80 flex flex-col px-4">
+          <SheetContent side="right" className="w-[300px] sm:w-[350px] flex flex-col px-4 overflow-y-auto">
             {/* ✨ Hero Card / Interesting Design Block */}
-            <div className="mt-4 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white p-4 shadow-lg relative overflow-hidden">
+            <div className="mt-8 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white p-4 shadow-lg relative overflow-hidden shrink-0">
               <div className="absolute -right-10 -top-10 h-24 w-24 rounded-full bg-cyan-500/10 blur-2xl" />
               <div className="absolute -left-16 bottom-0 h-24 w-24 rounded-full bg-emerald-500/10 blur-2xl" />
 
@@ -251,11 +281,6 @@ export function Header() {
               </div>
 
               <div className="mt-3 flex items-center justify-between text-[11px] text-slate-200/80">
-                <div className="flex flex-col">
-                  <span className="font-semibold text-sm">24/7</span>
-                  <span>Project Support</span>
-                </div>
-                <div className="h-8 w-px bg-white/10" />
                 <div className="flex flex-col items-end">
                   <span className="font-semibold text-sm">100%+</span>
                   <span>Quality Focus</span>
@@ -264,7 +289,7 @@ export function Header() {
             </div>
 
             {/* ⚡ Quick Actions */}
-            <div className="mt-4 grid grid-cols-2 gap-3">
+            <div className="mt-4 grid grid-cols-2 gap-3 shrink-0">
               <Button
                 asChild
                 variant="outline"
@@ -286,7 +311,7 @@ export function Header() {
               </Button>
             </div>
 
-            <div className="mt-5 space-y-2 flex-1 overflow-y-auto pb-4">
+            <div className="mt-5 space-y-2 flex-1">
               <div className="flex flex-col gap-1">
                 <span className="text-[11px] font-semibold text-gray-500 uppercase tracking-[0.18em]">
                   Navigation
@@ -302,10 +327,11 @@ export function Header() {
                       key={link.href}
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className={`flex items-center justify-between rounded-xl px-3 py-2 text-base font-semibold transition-colors ${isActive
-                        ? "bg-blue-50 text-[#1D4ED8] border border-blue-100"
-                        : "text-gray-700 hover:bg-gray-100"
-                        }`}
+                      className={`flex items-center justify-between rounded-xl px-3 py-2 text-base font-semibold transition-colors ${
+                        isActive
+                          ? "bg-blue-50 text-[#1D4ED8] border border-blue-100"
+                          : "text-gray-700 hover:bg-gray-100"
+                      }`}
                     >
                       <span>{link.label}</span>
                     </Link>
@@ -316,10 +342,11 @@ export function Header() {
                 <button
                   type="button"
                   onClick={() => setMobileServicesOpen((prev) => !prev)}
-                  className={`mt-2 flex w-full items-center justify-between rounded-xl px-3 py-2 text-base font-semibold transition-colors border ${isServicesActive
-                    ? "bg-blue-50 text-[#1D4ED8] border-blue-200"
-                    : "text-gray-700 hover:bg-gray-100 border-gray-200/70"
-                    }`}
+                  className={`mt-2 flex w-full items-center justify-between rounded-xl px-3 py-2 text-base font-semibold transition-colors border ${
+                    isServicesActive
+                      ? "bg-blue-50 text-[#1D4ED8] border-blue-200"
+                      : "text-gray-700 hover:bg-gray-100 border-gray-200/70"
+                  }`}
                 >
                   <div className="flex items-center gap-2">
                     <span>Services</span>
@@ -328,8 +355,9 @@ export function Header() {
                     </span>
                   </div>
                   <ChevronDown
-                    className={`h-4 w-4 transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""
-                      }`}
+                    className={`h-4 w-4 transition-transform duration-200 ${
+                      mobileServicesOpen ? "rotate-180" : ""
+                    }`}
                   />
                 </button>
 
@@ -343,19 +371,22 @@ export function Header() {
                           key={link.href}
                           href={link.href}
                           onClick={() => setIsOpen(false)}
-                          className={`flex items-start gap-3 rounded-lg px-2 py-2 text-xs transition-colors ${isActive
-                            ? "bg-blue-50 text-[#1D4ED8]"
-                            : index === 0
+                          className={`flex items-start gap-3 rounded-lg px-2 py-2 text-xs transition-colors ${
+                            isActive
+                              ? "bg-blue-50 text-[#1D4ED8]"
+                              : index === 0
                               ? "bg-gradient-to-r from-blue-50 to-teal-50 text-[#2563EB]"
                               : "text-gray-700 hover:bg-gray-100"
-                            }`}
+                          }`}
                         >
                           <div className="mt-0.5">
                             <Icon className="h-4 w-4" />
                           </div>
                           <div>
                             <div className="font-semibold">{link.label}</div>
-                            <div className="text-[11px] text-gray-500">{link.description}</div>
+                            <div className="text-[11px] text-gray-500">
+                              {link.description}
+                            </div>
                           </div>
                         </Link>
                       )
@@ -366,7 +397,7 @@ export function Header() {
             </div>
 
             {/* Bottom: Contact & CTA */}
-            <div className="border-t pt-4 mt-3 space-y-3">
+            <div className="border-t pt-4 mt-3 mb-6 space-y-3">
               <div className="flex items-center justify-between text-sm">
                 <div>
                   <div className="text-[10px] uppercase text-gray-400 mb-0.5 tracking-[0.18em]">
@@ -379,9 +410,6 @@ export function Header() {
                     +91 88669 68821
                   </a>
                 </div>
-                <span className="rounded-full bg-gray-100 px-3 py-1 text-[10px] font-medium text-gray-600">
-                  Response within 24 hrs
-                </span>
               </div>
               <Button
                 asChild

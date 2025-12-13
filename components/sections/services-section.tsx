@@ -74,14 +74,14 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[280px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[minmax(300px,auto)]">
           {services.map((service, index) => {
             const href = slugMap[service.key] ?? "/services" // fallback
             return (
               <Link
                 key={service.key}
                 href={href}
-                className={`relative group overflow-hidden rounded-lg ${service.span} block focus:outline-none focus:ring-4 focus:ring-[#00A896]/20`}
+                className={`relative group overflow-hidden rounded-lg ${service.span} block focus:outline-none focus:ring-4 focus:ring-[#00A896]/20 py-6`}
                 aria-label={`Open ${service.title} page`}
               >
                 {/* Image (parent must be position:relative for Image fill) */}
@@ -101,7 +101,7 @@ export function ServicesSection() {
                 <div className="relative z-10 p-6 flex flex-col justify-end h-full">
                   <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
 
-                  <p className="text-white/90 text-sm leading-relaxed mb-4 max-h-20 overflow-hidden">
+                  <p className="text-white/90 text-sm leading-relaxed mb-4">
                     {service.description}
                   </p>
 

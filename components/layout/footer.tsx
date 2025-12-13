@@ -17,11 +17,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef, useLayoutEffect } from "react";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export function Footer() {
   const formSchema = z.object({
@@ -66,58 +61,6 @@ export function Footer() {
     setTimeout(() => setSubmitStatus("idle"), 3000);
   };
 
-
-  const footerRef = useRef<HTMLElement>(null);
-
-  useLayoutEffect(() => {
-    const mm = gsap.matchMedia();
-
-    mm.add(
-      "(min-width: 768px)",
-      () => {
-        // Animate Background Pattern
-        gsap.to(".footer-pattern", {
-          y: -50,
-          ease: "none",
-          scrollTrigger: {
-            trigger: footerRef.current,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 1,
-          },
-        });
-
-        // Staggered Content Reveal
-        gsap.from(".footer-col", {
-          y: 50,
-          opacity: 0,
-          duration: 1,
-          stagger: 0.1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: footerRef.current,
-            start: "top 80%",
-            toggleActions: "play none none reverse",
-          },
-        });
-
-        // Copyright Reveal
-        gsap.from(".footer-copyright", {
-          opacity: 0,
-          duration: 1,
-          delay: 0.5,
-          scrollTrigger: {
-            trigger: footerRef.current,
-            start: "top 80%",
-          },
-        });
-      },
-      footerRef
-    );
-
-    return () => mm.revert();
-  }, []);
-
   const footerLinks = {
     services: [
       { label: "All Services", href: "/services" },
@@ -141,7 +84,7 @@ export function Footer() {
   };
 
   return (
-    <footer ref={footerRef} className="relative border-t bg-white text-slate-800 overflow-hidden">
+    <footer className="relative border-t bg-white text-slate-800 overflow-hidden">
       <div className="relative z-10 w-full max-w-none px-6 md:px-12 py-6 md:py-8">
         <div className="grid gap-8 grid-cols-1 md:grid-cols-[1fr_auto_auto_auto_1fr]">
           {/* Contact Information */}
