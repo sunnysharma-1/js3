@@ -95,50 +95,34 @@ export function Header() {
   const isServicesActive = pathname.startsWith("/services")
 
   return (
-    <header >
-      {/* UPDATES FOR DESKTOP:
-        1. max-w-7xl: Prevents content from stretching too wide on 4k screens.
-        2. mx-auto: Centers the content.
-        3. h-20: Fixed height for consistency (instead of arbitrary h-23).
-      */}
-      <div className="mx-auto flex h-21 w-full max-w-7xl items-center justify-between px-8 sm:px-6 lg:px-6">
-        
+    <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
+      <div className="mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-20 max-w-[1920px]">
+
         {/* Logo Section */}
         <Link href="/" className="flex items-center shrink-0">
-          {/* UPDATES:
-            Resized the container to fit the header height (h-14). 
-            The original h-60 was too large for a standard sticky navbar.
-          */}
-          <div className="relative h-60 w-60 md:h-70 md:w-60">
+          <div className="relative h-60 w-60 md:h-70 md:w-70 lg:h-60 lg:w-60 transition-all duration-300">
             <Image
               src="/images/design-mode/Black_and_White_Circular_Art___Design_Logo__1_-removebg-preview.png"
               alt="Jayshree Instruments Logo"
               fill
-              className="object-contain"
+              className="object-contain object-left"
               priority
             />
           </div>
-          {/* Optional: Add Company Name text next to logo for better desktop visibility if needed */}
-          {/* <span className="ml-2 text-xl font-bold hidden xl:block">Jayshree</span> */}
         </Link>
 
         {/* Desktop Navigation - Center */}
-        {/* UPDATES:
-           1. lg:gap-6 xl:gap-10: Adjusts spacing based on screen size (tighter on laptops, wider on large screens).
-           2. text-sm xl:text-base: Adjusts font size for readability.
-        */}
-        <nav className="hidden lg:flex lg:items-center lg:gap-6 xl:gap-10">
+        <nav className="hidden lg:flex lg:items-center lg:gap-6 xl:gap-10 2xl:gap-14">
           {navLinks.map((link) => {
             const isActive = pathname === link.href
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative text-sm font-semibold xl:text-base transition-colors hover:text-[#4A90E2] after:absolute after:bottom-[-2px] after:left-0 after:h-0.5 after:bg-[#4A90E2] after:transition-all after:duration-300 ${
-                  isActive
-                    ? "text-[#4A90E2] after:w-full"
-                    : "text-gray-700 after:w-0 hover:after:w-full"
-                }`}
+                className={`relative text-sm xl:text-base 2xl:text-lg font-semibold transition-colors hover:text-[#4A90E2] py-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-[#4A90E2] after:transition-all after:duration-300 ${isActive
+                  ? "text-[#4A90E2] after:w-full"
+                  : "text-gray-700 after:w-0 hover:after:w-full"
+                  }`}
               >
                 {link.label}
               </Link>
@@ -147,9 +131,8 @@ export function Header() {
 
           <DropdownMenu>
             <DropdownMenuTrigger
-              className={`flex items-center gap-1 text-sm xl:text-base font-semibold transition-colors hover:text-[#4A90E2] focus:outline-none data-[state=open]:text-[#4A90E2] ${
-                isServicesActive ? "text-[#4A90E2]" : "text-gray-700"
-              }`}
+              className={`flex items-center gap-1 text-sm xl:text-base 2xl:text-lg font-semibold transition-colors hover:text-[#4A90E2] focus:outline-none data-[state=open]:text-[#4A90E2] py-2 ${isServicesActive ? "text-[#4A90E2]" : "text-gray-700"
+                }`}
             >
               Services
               <ChevronDown className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180" />
@@ -166,24 +149,21 @@ export function Header() {
                     <DropdownMenuItem key={link.href} asChild>
                       <Link
                         href={link.href}
-                        className={`cursor-pointer flex items-start gap-3 p-3 rounded-lg transition-colors hover:bg-blue-50 ${
-                          index === 0
-                            ? "bg-gradient-to-r from-blue-50 to-teal-50 border border-blue-100"
-                            : ""
-                        }`}
+                        className={`cursor-pointer flex items-start gap-3 p-3 rounded-lg transition-colors hover:bg-blue-50 ${index === 0
+                          ? "bg-gradient-to-r from-blue-50 to-teal-50 border border-blue-100"
+                          : ""
+                          }`}
                       >
                         <div
-                          className={`mt-0.5 ${
-                            index === 0 ? "text-[#4A90E2]" : "text-gray-500"
-                          }`}
+                          className={`mt-0.5 ${index === 0 ? "text-[#4A90E2]" : "text-gray-500"
+                            }`}
                         >
                           <Icon className="h-5 w-5" />
                         </div>
                         <div className="flex-1">
                           <div
-                            className={`font-medium ${
-                              index === 0 ? "text-[#4A90E2]" : "text-gray-900"
-                            }`}
+                            className={`font-medium ${index === 0 ? "text-[#4A90E2]" : "text-gray-900"
+                              }`}
                           >
                             {link.label}
                           </div>
@@ -201,18 +181,18 @@ export function Header() {
         </nav>
 
         {/* Contact Info - Desktop */}
-        <div className="hidden lg:flex items-center gap-4 xl:gap-6 shrink-0">
-          <div className="flex items-center gap-2 text-sm xl:text-base">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-8 2xl:gap-10 shrink-0">
+          <div className="flex items-center gap-2 text-sm xl:text-base 2xl:text-lg">
             <a
               href="tel:+918866968821"
-              className="text-gray-700 hover:text-[#4A90E2] transition-colors whitespace-nowrap"
+              className="text-gray-700 hover:text-[#4A90E2] transition-colors whitespace-nowrap font-medium"
             >
               +91 88669 68821
             </a>
           </div>
           <Button
             asChild
-            className="bg-gradient-to-r from-[#00A896] to-[#008C7A] hover:from-[#008C7A] hover:to-[#00A896] text-white rounded-lg px-6 font-medium shadow-md hover:shadow-lg transition-all duration-300"
+            className="bg-gradient-to-r from-[#00A896] to-[#008C7A] hover:from-[#008C7A] hover:to-[#00A896] text-white rounded-lg px-6 py-2.5 h-auto text-sm xl:text-base 2xl:text-lg font-medium shadow-md hover:shadow-lg transition-all duration-300"
           >
             <Link href="/contact">Get in Touch</Link>
           </Button>
@@ -327,11 +307,10 @@ export function Header() {
                       key={link.href}
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className={`flex items-center justify-between rounded-xl px-3 py-2 text-base font-semibold transition-colors ${
-                        isActive
-                          ? "bg-blue-50 text-[#1D4ED8] border border-blue-100"
-                          : "text-gray-700 hover:bg-gray-100"
-                      }`}
+                      className={`flex items-center justify-between rounded-xl px-3 py-2 text-base font-semibold transition-colors ${isActive
+                        ? "bg-blue-50 text-[#1D4ED8] border border-blue-100"
+                        : "text-gray-700 hover:bg-gray-100"
+                        }`}
                     >
                       <span>{link.label}</span>
                     </Link>
@@ -342,11 +321,10 @@ export function Header() {
                 <button
                   type="button"
                   onClick={() => setMobileServicesOpen((prev) => !prev)}
-                  className={`mt-2 flex w-full items-center justify-between rounded-xl px-3 py-2 text-base font-semibold transition-colors border ${
-                    isServicesActive
-                      ? "bg-blue-50 text-[#1D4ED8] border-blue-200"
-                      : "text-gray-700 hover:bg-gray-100 border-gray-200/70"
-                  }`}
+                  className={`mt-2 flex w-full items-center justify-between rounded-xl px-3 py-2 text-base font-semibold transition-colors border ${isServicesActive
+                    ? "bg-blue-50 text-[#1D4ED8] border-blue-200"
+                    : "text-gray-700 hover:bg-gray-100 border-gray-200/70"
+                    }`}
                 >
                   <div className="flex items-center gap-2">
                     <span>Services</span>
@@ -355,9 +333,8 @@ export function Header() {
                     </span>
                   </div>
                   <ChevronDown
-                    className={`h-4 w-4 transition-transform duration-200 ${
-                      mobileServicesOpen ? "rotate-180" : ""
-                    }`}
+                    className={`h-4 w-4 transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
 
@@ -371,13 +348,12 @@ export function Header() {
                           key={link.href}
                           href={link.href}
                           onClick={() => setIsOpen(false)}
-                          className={`flex items-start gap-3 rounded-lg px-2 py-2 text-xs transition-colors ${
-                            isActive
-                              ? "bg-blue-50 text-[#1D4ED8]"
-                              : index === 0
+                          className={`flex items-start gap-3 rounded-lg px-2 py-2 text-xs transition-colors ${isActive
+                            ? "bg-blue-50 text-[#1D4ED8]"
+                            : index === 0
                               ? "bg-gradient-to-r from-blue-50 to-teal-50 text-[#2563EB]"
                               : "text-gray-700 hover:bg-gray-100"
-                          }`}
+                            }`}
                         >
                           <div className="mt-0.5">
                             <Icon className="h-4 w-4" />

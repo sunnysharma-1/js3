@@ -79,7 +79,7 @@ export default function WireHarnessPage() {
           <div className="absolute bottom-0 left-10 h-72 w-72 rounded-full bg-indigo-500/15 blur-3xl" />
         </div>
 
-        <div className="relative z-10 container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] items-center">
             <motion.div
               initial={{ opacity: 0, y: 32 }}
@@ -193,7 +193,7 @@ export default function WireHarnessPage() {
 
       {/* What We Do */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
-        <div className="container max-w-7xl mx-auto">
+        <div className="w-full max-w-[1920px] mx-auto">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -248,7 +248,7 @@ export default function WireHarnessPage() {
 
       {/* Process Steps */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 to-slate-800 text-white px-4 sm:px-6 lg:px-8">
-        <div className="container max-w-7xl mx-auto">
+        <div className="w-full max-w-[1920px] mx-auto">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -327,7 +327,7 @@ export default function WireHarnessPage() {
 
       {/* Capabilities */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white px-4 sm:px-6 lg:px-8">
-        <div className="container max-w-7xl mx-auto">
+        <div className="w-full max-w-[1920px] mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4 bg-gradient-to-r from-[#0066CC] to-[#00A896] bg-clip-text text-transparent">
               Harness Capabilities
@@ -368,7 +368,7 @@ export default function WireHarnessPage() {
 
       {/* CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-[#0066CC] via-[#007FAF] to-[#00A896] text-white px-4 sm:px-6 lg:px-8">
-        <div className="container max-w-6xl mx-auto">
+        <div className="w-full max-w-[1920px] mx-auto">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1.7fr)_minmax(0,1.1fr)] items-center">
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/30 text-xs font-medium mb-4">

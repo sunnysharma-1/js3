@@ -69,7 +69,7 @@ export default function BoxBuildPage() {
           <div className="absolute bottom-0 left-10 h-72 w-72 rounded-full bg-emerald-400/20 blur-3xl" />
         </div>
 
-        <div className="relative z-10 container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] items-center">
             {/* Left: copy + stats */}
             <motion.div
@@ -210,7 +210,7 @@ export default function BoxBuildPage() {
 
       {/* What We Do */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
+        <div className="w-full max-w-[1920px] mx-auto">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -267,7 +267,7 @@ export default function BoxBuildPage() {
 
       {/* Assembly Process Showcase */}
       <section id="process" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="container max-w-7xl mx-auto">
+        <div className="w-full max-w-[1920px] mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#0066CC] to-[#00A896] bg-clip-text text-transparent">
               Assembly Workflow
@@ -336,7 +336,7 @@ export default function BoxBuildPage() {
 
       {/* Quality & Testing Standards */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 to-slate-800 text-white px-4 sm:px-6 lg:px-8">
-        <div className="container max-w-7xl mx-auto">
+        <div className="w-full max-w-[1920px] mx-auto">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -404,7 +404,7 @@ export default function BoxBuildPage() {
 
       {/* Industry Applications */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="container max-w-7xl mx-auto">
+        <div className="w-full max-w-[1920px] mx-auto">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -469,7 +469,7 @@ export default function BoxBuildPage() {
 
       {/* What We Offer – cards */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white px-4 sm:px-6 lg:px-8">
-        <div className="container max-w-7xl mx-auto">
+        <div className="w-full max-w-[1920px] mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#0066CC] to-[#00A896] bg-clip-text text-transparent">
               Turnkey Capabilities
@@ -510,7 +510,7 @@ export default function BoxBuildPage() {
 
       {/* Get Started CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-[#0066CC] via-[#007FAF] to-[#00A896] text-white px-4 sm:px-6 lg:px-8">
-        <div className="container max-w-6xl mx-auto">
+        <div className="w-full max-w-[1920px] mx-auto">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1.7fr)_minmax(0,1.1fr)] items-center">
             {/* Left: messaging */}
             <div>

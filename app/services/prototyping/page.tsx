@@ -96,7 +96,7 @@ export default function PrototypingPage() {
           <div className="absolute left-[-60px] bottom-[-60px] h-80 w-80 rounded-full bg-blue-500/25 blur-3xl" />
         </div>
 
-        <div className="relative z-10 container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 w-full mx-auto max-w-[1920px] px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-10 lg:grid-cols-12">
             <motion.div
               className="lg:col-span-7"
@@ -187,7 +187,7 @@ export default function PrototypingPage() {
 
       {/* SEGMENTATION: Student vs Enterprise */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-slate-50">
-        <div className="container max-w-7xl mx-auto">
+        <div className="w-full max-w-[1920px] mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
               Tailored Support for Every Stage
@@ -279,7 +279,7 @@ export default function PrototypingPage() {
 
       {/* What We Offer */}
       <section className="py-16 md:py-24 bg-white px-4 sm:px-6 lg:px-8">
-        <div className="container max-w-7xl mx-auto">
+        <div className="w-full max-w-[1920px] mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#0066CC] to-[#00A896] bg-clip-text text-transparent">
               Prototyping Capabilities
@@ -319,23 +319,74 @@ export default function PrototypingPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-20 bg-gradient-to-br from-[#0066CC] to-[#00A896] text-white px-4 sm:px-6 lg:px-8">
-        <div className="container max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance drop-shadow-lg">
-            Got a design ready?
-          </h2>
-          <p className="text-lg text-white/95 mb-8 text-pretty drop-shadow-md">
-            Send us your Gerbers and BOM. We'll get back to you with a quote and DFM feedback within 24 hours.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button
-                size="lg"
-                className="bg-white text-[#0066CC] hover:bg-white/90 shadow-xl hover:shadow-2xl transition-all"
-              >
-                Upload Files <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+      <section className="py-16 md:py-20 bg-gradient-to-br from-[#0066CC] via-[#007FAF] to-[#00A896] text-white px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-6xl mx-auto">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.7fr)_minmax(0,1.1fr)] items-center">
+            {/* Left: messaging */}
+            <div>
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/30 text-xs font-medium mb-4">
+                <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse" />
+                Accelerate your development.
+              </div>
+
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance drop-shadow-lg">
+                Ready to validate your design?
+              </h2>
+
+              <p className="text-sm md:text-base text-white/90 mb-6 max-w-xl leading-relaxed">
+                Send us your Gerbers and BOM. We'll get back to you with a quote and comprehensive DFM feedback within 24 hours.
+              </p>
+
+              <div className="space-y-3">
+                {[
+                  "24-72h Turnaround on standard builds",
+                  "DFM feedback included with every quote",
+                  "No Minimum Order Quantity (MOQ = 1)",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-2 text-sm text-white/95">
+                    <CheckCircle className="h-4 w-4 mt-0.5 text-emerald-300" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: contact block */}
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/25 p-6 shadow-xl">
+              <h3 className="text-lg font-semibold mb-2">Start a conversation</h3>
+              <p className="text-xs md:text-sm text-white/85 mb-5">
+                Upload your design files or schedule a lab session with our engineers.
+              </p>
+
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-white/90">Email</span>
+                  <span className="font-medium">info@jinst.in</span>
+                </div>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-white/90">Phone</span>
+                  <span className="font-medium">+91 88669 68821</span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <Link href="/contact">
+                  <Button className="bg-white text-[#0066CC] hover:bg-white/90 shadow-lg px-5 py-2 text-sm md:text-base">
+                    Get a Quote
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button
+                    variant="outline"
+                    className="border-white text-white hover:bg-white/15 bg-transparent px-5 py-2 text-sm md:text-base"
+                  >
+                    Schedule Visit
+                  </Button>
+                </Link>
+              </div>
+
+            </div>
           </div>
         </div>
       </section>
